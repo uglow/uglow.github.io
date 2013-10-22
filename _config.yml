@@ -2,7 +2,7 @@ title:            ugl&#9728;w
 description:      Memorable moments in the life of a creator 
 disqus_shortname: 
 #Comment out url when working locally to resolve base urls correctly
-#url:              http://uglow.github.io
+url:              http://uglow.github.io
 
 # Owner/author information
 owner:
