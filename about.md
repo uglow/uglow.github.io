@@ -1,8 +1,8 @@
 ---
 layout: page
 permalink: /about/
-title: About the Theme
-tags: [Jekyll, theme, modern, minimal, responsive]
+title: About me
+tags: [me]
 image:
   feature: abstract-5.jpg
   credit: dargadgetz
@@ -10,23 +10,15 @@ image:
 share: true
 ---
 
-They say three times the charm, so here is another free responsive Jekyll theme for you. I've learned a ton since open sourcing my first two themes [on Github](http://github.com/mmistakes), and wanted to try a few new things this time around. If you've used my previous themes most of this should be familiar territory...
+## I am...
 
-## What HPSTR brings to the table:
+* An excellent front-end developer with over 14 years in the IT industry
+* Fluent in HTML5, CSS3 and JS technologies including AngularJS, NodeJS, Jasmine, GruntJS and all the other bits-and-bobs that front-end devs use to create modern user interfaces for desktop and mobiles
+* Passionate about creating great user experiences
+* Passionate about writing code that is testable, maintainable and efficient
+* Interested in making life simpler for people by combining technology with user-centered design
+* Happily married to my beautiful wife, Amy
+* Keenly interested in technology, user interfaces, ice hockey, movies, and seeing peoples' lives changed-for-the-better
 
-* Responsive templates for post, page, and post index `_layouts`. Looks great on mobile, tablet, and desktop devices.
-* Gracefully degrads in older browsers. Compatible with Internet Explorer 8+ and all modern browsers.  
-* Modern and minimal design.
-* Sweet animated menu.
-* Readable typography to make your words shine.
-* Support for large images to call out your favorite posts.
-* Comments powered by [Disqus](http://disqus.com) if you choose to enable.
-* Simple and clear permalink structure[^1].
-* [Open Graph](https://developers.facebook.com/docs/opengraph/) and [Twitter Cards](https://dev.twitter.com/docs/cards) support for a better social sharing experience.
-* Simple [custom 404 page]({{ site.url }}/404.html) to get you started.
-* Stylesheets for Pygments and Coderay [syntax highlighting]({{ site.url }}/code-highlighting-post/) to make your code examples look snazzy
-* [Grunt](http://gruntjs.com) build script for easy theme development
 
-<div markdown="0"><a href="{{ site.url }}/theme-setup" class="btn btn-info">Install the Theme</a></div>
-
-[^1]: Example: *domain.com/category-name/post-title*
+> I am the voice of one crying in the wilderness, "Make straight the way of the Lord!" `John 1:23`

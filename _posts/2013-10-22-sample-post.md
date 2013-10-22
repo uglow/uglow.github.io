@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Ugl&#9728;w on GitHub Pages...
-description: "Finally got a blog..."
-modified: 2013-05-31
-tags: [sample post]
+title: Ugl&#9728;w on GitHub
+description: "Finally got a blog... :)"
+modified: 2013-10-23
+tags: [jekyll, newbie]
 image:
   feature: abstract-3.jpg
   credit: dargadgetz
