@@ -1,4 +1,4 @@
-title:            ugl&#9728;w
+title:            ugl<span class='sun'>&#9728;</span>w
 description:      Memorable moments in the life of a creator 
 disqus_shortname: 
 #Comment out url when working locally to resolve base urls correctly
@@ -40,7 +40,7 @@ links:
     external: true
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-timezone:    America/New_York
+timezone:    Australia/Melbourne
 future:      true
 pygments:    true
 markdown:    kramdown

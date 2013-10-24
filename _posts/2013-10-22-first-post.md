@@ -1,6 +1,7 @@
 ---
+published: true
 layout: post
-title: Ugl&#9728;w on GitHub
+title: Ugl<span class='sun'>&#9728;</span>w on GitHub
 description: "Finally got a blog... :)"
 modified: 2013-10-23
 tags: [jekyll, newbie]
@@ -12,7 +13,7 @@ comments: true
 share: true
 ---
 
-A blog site that's not a pain-in-the-@#$@ to setup and configure!
+A blog site that's not a pain-in-the-bottom to setup and configure!
 
 [Jekyll](http://jekyllrb.com/) is pretty cool, but I learned more from [this theme](http://mmistakes.github.io/hpstr-jekyll-theme/theme-setup/).
 
