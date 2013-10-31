@@ -1,9 +1,9 @@
 ---
-published: false
+published: true
 layout: post
-title: Lessons from a recent project
+title: "Notes from a recent mobile project"
 description: ""
-modified: 2013-10-24
+modified: 2013-10-31
 tags: [client, mobile, web, SASS, HTML5, CSS3, AngularJS, CMS, Compass]
 image:
   feature: abstract2.jpg

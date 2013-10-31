@@ -1,3 +1,4 @@
+# COMMON CONFIG with PRODUCTION DEFAULTS
 title:            ugl<span class='sun'>&#9728;</span>w
 description:      Memorable moments in the life of a creator 
 disqus_shortname: 
@@ -5,6 +6,7 @@ disqus_shortname:
 url:              http://uglow.github.io
 #Where the "Home" on the nav menu takes you
 home:             http://uglow.github.io
+liveReloadTag:    
 
 # Owner/author information
 owner:
@@ -66,4 +68,4 @@ kramdown:
     coderay_css: class
 
 include: [".htaccess"]
-exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules"]
+exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "dev", "dist", "sass", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules"]

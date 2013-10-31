@@ -1,13 +1,10 @@
 {
-  "name": "hpstr-theme",
-  "author": "Michael Rose <michael@mademistakes.com>",
-  "homepage": "http://mmistakes.github.io/hpstr-jekyll-theme/",
+  "name": "Uglows.Blog",
+  "author": "Brett Uglow <u_glow@hotmail.com>",
+  "homepage": "http://uglow.github.io",
   "repository": {
     "type": "git",
-    "url": "git://github.com/mmistakes/hpstr-jekyll-theme.git"
-  },
-  "bugs": {
-    "url": "https://github.com/mmistakes/hpstr-jekyll-theme/issues"
+    "url": "git://github.com/uglow.git"
   },
   "engines": {
     "node": ">= 0.10.0"
@@ -15,11 +12,16 @@
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-contrib-clean": "~0.5.0",
-    "grunt-contrib-jshint": "~0.6.3",
-    "grunt-contrib-uglify": "~0.2.2",
-    "grunt-contrib-watch": "~0.5.2",
+    "grunt-contrib-compass": "~0.6.0",
+    "grunt-contrib-jshint": "~0.7.0",
+    "grunt-contrib-uglify": "~0.2.5",
+    "grunt-contrib-watch": "~0.5.3",
     "grunt-recess": "~0.3.5",
-    "grunt-contrib-imagemin": "~0.2.0",
-    "grunt-svgmin": "~0.2.0"
+    "grunt-contrib-imagemin": "~0.2.1",
+    "grunt-svgmin": "~0.2.0",
+    "grunt-exec": "~0.4.2",
+    "grunt-contrib-copy": "~0.4.1",
+    "grunt-contrib-connect": "~0.5.0",
+    "matchdep": "~0.3.0"
   }
 }

@@ -1,7 +1,7 @@
 ---
 published: true
 layout: post
-title: Ugl<span class='sun'>&#9728;</span>w on GitHub
+title: "Ugl<span class='sun'>&#9728;</span>w on GitHub"
 description: "Finally got a blog... :)"
 modified: 2013-10-23
 tags: [jekyll, newbie]

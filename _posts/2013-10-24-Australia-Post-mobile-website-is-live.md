@@ -1,7 +1,7 @@
 ---
 published: true
 layout: post
-title: Australia Post's new mobile website is live!
+title: "Australia Post's new mobile website is live!"
 description: ""
 modified: 2013-10-24
 tags: [client, mobile, web]
