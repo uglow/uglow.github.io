@@ -18,4 +18,13 @@ Using [this article](alink: http://davidensinger.com/2013/04/deploying-jekyll-to
 git branch -m master master-old
 # Create source branch from the old master and check it out
 git checkout master-old && git checkout -b source
+
+# Delete the master branch
+git branch -D master
+# Create a new master branch
+git checkout -b master
+#Force the web subdirectory to be project root:
+git filter-branch --subdirectory-filter web/ -f
+
+
 {% endhighlight}
