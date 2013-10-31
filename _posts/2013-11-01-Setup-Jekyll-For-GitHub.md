@@ -7,5 +7,15 @@ modified: 2013-11-01
 tags: [git, github, jekyll, newbie]
 comments: false
 share: true 
-link: http://davidensinger.com/2013/04/deploying-jekyll-to-github-pages/
 ---
+
+Using [this article](alink: http://davidensinger.com/2013/04/deploying-jekyll-to-github-pages/) as a guide and
+[this one](http://blog.coolaj86.com/articles/hosting-your-blog-on-github-pages.html):
+
+
+{% highlight console linenos %}
+# rename current master to something else
+git branch -m master master-old
+# Create source branch from the old master and check it out
+git checkout master-old && git checkout -b source
+{% endhighlight}
