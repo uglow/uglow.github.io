@@ -5,25 +5,25 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>Ugl<span class='sun'>&#9728;</span>w on GitHub &#8211; ugl<span class='sun'>&#9728;</span>w</title>
-<meta name="description" content="Finally got a blog... :)">
-<meta name="keywords" content="jekyll, newbie">
+<title>Notes from a recent mobile project &#8211; ugl<span class='sun'>&#9728;</span>w</title>
+<meta name="description" content="">
+<meta name="keywords" content="client, mobile, web, SASS, HTML5, CSS3, AngularJS, CMS, Compass">
 
 
 
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Ugl<span class='sun'>&#9728;</span>w on GitHub">
-<meta property="og:description" content="Finally got a blog... :)">
-<meta property="og:url" content="http://uglow.github.io/first-post">
+<meta property="og:title" content="Notes from a recent mobile project">
+<meta property="og:description" content="">
+<meta property="og:url" content="http://uglow.github.io/Lessons-from-client-website-engagement">
 <meta property="og:site_name" content="ugl<span class='sun'>&#9728;</span>w">
 
 
 
 
 
-<link rel="canonical" href="http://uglow.github.io/first-post">
+<link rel="canonical" href="http://uglow.github.io/Lessons-from-client-website-engagement">
 <link href="http://uglow.github.io/feed.xml" type="application/atom+xml" rel="alternate" title="ugl<span class='sun'>&#9728;</span>w Feed">
 
 
@@ -107,8 +107,8 @@
 
 
 <div class="entry-header">
-  <div class="entry-image"><img src="http://uglow.github.io/images/abstract-3.jpg" alt="Ugl<span class='sun'>&#9728;</span>w on GitHub" itemprop="image">
-    <div class="image-credit">Image source: <a href="http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/">dargadgetz</a></div><!-- /.image-credit -->
+  <div class="entry-image"><img src="http://uglow.github.io/images/abstract2.jpg" alt="Notes from a recent mobile project" itemprop="image">
+    
   </div><!-- /.entry-image -->
 </div><!-- /.entry-header -->
 
@@ -118,28 +118,47 @@
     <header class="header-title">
       <div class="header-title-wrap">
         
-          <h1 class="entry-title" itemprop="name"><a href="/first-post" rel="bookmark" title="Ugl<span class='sun'>&#9728;</span>w on GitHub" itemprop="url">Ugl<span class='sun'>&#9728;</span>w on GitHub</a></h1>
+          <h1 class="entry-title" itemprop="name"><a href="/Lessons-from-client-website-engagement" rel="bookmark" title="Notes from a recent mobile project" itemprop="url">Notes from a recent mobile project</a></h1>
         
-        <h2>October 22, 2013</h2>
+        <h2>October 31, 2013</h2>
       </div><!-- /.header-title-wrap -->
     </header>
     <div class="entry-content" itemprop="description">
-      <p>A blog site that’s not a pain-in-the-bottom to setup and configure!</p>
+      <p>I have been developing a website for a top-tier client in Melbourne. The site is built using AngularJS (v1.1.5 as of time of writing), SASS, Compass and GruntJs to pull it all together. The development team consisted of myself as lead dev, Mario Skouros, Peter Mescalchin and Steven Yip, with assistance from Michael Black and Vlado Grancaric. Well done guys!</p>
 
-<p><a href="http://jekyllrb.com/">Jekyll</a> is pretty cool, but I learned more from <a href="http://mmistakes.github.io/hpstr-jekyll-theme/theme-setup/">this theme</a>.</p>
+<h1 id="design">Design</h1>
 
-<p>The <a href="http://daringfireball.net/projects/markdown/basics">MarkDown Reference Guide</a> is also very useful.</p>
+<p>The visual and interface design was by George Metaxas, who is part of the client’s design team.</p>
+
+<h1 id="under-the-hood">Under the hood</h1>
+
+<p>The site is part application, part CMS-driven website. It was technically challenging to get the client’s CMS to produce the content in a format and structure that AngularJS could consuem, but we found a solution that was workable.</p>
+
+<p>The site is build for modern browsers (Android 2.3+, i-devices, Blackberry, …) and should work with desktop browsers as well (recent versions of Chrome, Safari and Firefox). We elected early on not to support IE because, well, IE is not very standards-compliant. But in our case, there are not many IE-users of the old mobile site, so it wasn’t worth investing in at this point in time.</p>
+
+<h2 id="engine--chassis---angularjs">Engine &amp; Chassis - AngularJS</h2>
+
+<p>We used AngularJS 1.1.5 - which added nice animation support and the ability to cancel timeouts. Using Angular was fantastic, but there were difficulties getting the Apache re-write rules to work for when the site was at the root and when it was a sub-directory site. Overall, I’d highly recommend using it for web applications and websites (up to N-hundred pages).</p>
+
+<h2 id="bolts---gruntjs">Bolts - GruntJS</h2>
+
+<p>GruntJS is a fantastic tool for front-end devs. It allowed us to integrate font-icon-building, image optimization and source-code minimisation into our build process. Combined with Apache’s mod_deflate, we were able to get the home page download from 1.2MB to less than 300kB (75% reduction).</p>
+
+<h2 id="paint---html5--css3">Paint - HTML5 &amp; CSS3</h2>
+
+<p>The site design was implemented using SASS &amp; Compass (with HTML). This kept the CSS from growing too big and the variable names allow us to maintain things more easily going forward. The CSS3 animation support in the Compass 0.13.alpha.4 helped us to do some nice CSS animations (like the loading spinner).</p>
+
 
       <footer class="entry-meta">
-        <span class="entry-tags"><a href="http://uglow.github.io/tags/index.html#jekyll" title="Pages tagged jekyll" rel="tag" class="tag">jekyll</a><a href="http://uglow.github.io/tags/index.html#newbie" title="Pages tagged newbie" rel="tag" class="tag">newbie</a></span>
-        <span><a href="http://uglow.github.io/first-post" rel="bookmark" title="Ugl<span class='sun'>&#9728;</span>w on GitHub" itemprop="url">Ugl<span class='sun'>&#9728;</span>w on GitHub</a> was published on <span class="entry-date date published updated"><time datetime="2013-10-22T00:00:00+11:00" itemprop="datePublished">October 22, 2013</time></span></span>
-        (revised: <span class="entry-date date modified"><time datetime="2013-10-23" itemprop="dateModified">10/23/2013</time></span>)
+        <span class="entry-tags"><a href="http://uglow.github.io/tags/index.html#client" title="Pages tagged client" rel="tag" class="tag">client</a><a href="http://uglow.github.io/tags/index.html#mobile" title="Pages tagged mobile" rel="tag" class="tag">mobile</a><a href="http://uglow.github.io/tags/index.html#web" title="Pages tagged web" rel="tag" class="tag">web</a><a href="http://uglow.github.io/tags/index.html#SASS" title="Pages tagged SASS" rel="tag" class="tag">SASS</a><a href="http://uglow.github.io/tags/index.html#HTML5" title="Pages tagged HTML5" rel="tag" class="tag">HTML5</a><a href="http://uglow.github.io/tags/index.html#CSS3" title="Pages tagged CSS3" rel="tag" class="tag">CSS3</a><a href="http://uglow.github.io/tags/index.html#AngularJS" title="Pages tagged AngularJS" rel="tag" class="tag">AngularJS</a><a href="http://uglow.github.io/tags/index.html#CMS" title="Pages tagged CMS" rel="tag" class="tag">CMS</a><a href="http://uglow.github.io/tags/index.html#Compass" title="Pages tagged Compass" rel="tag" class="tag">Compass</a></span>
+        <span><a href="http://uglow.github.io/Lessons-from-client-website-engagement" rel="bookmark" title="Notes from a recent mobile project" itemprop="url">Notes from a recent mobile project</a> was published on <span class="entry-date date published updated"><time datetime="2013-10-31T00:00:00+11:00" itemprop="datePublished">October 31, 2013</time></span></span>
+        (revised: <span class="entry-date date modified"><time datetime="2013-10-31" itemprop="dateModified">10/31/2013</time></span>)
         <span class="author vcard" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name" class="fn"><a href="http://uglow.github.io/about" title="About Brett Uglow" itemprop="url">Brett Uglow</a></span></span>
         <div class="social-share">
-          <ul class="socialcount socialcount-small inline-list" data-url="http://uglow.github.io/first-post" data-share-text="Ugl<span class='sun'>&#9728;</span>w on GitHub">
-            <li class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=http://uglow.github.io/first-post" title="Share on Facebook"><span class="count"><i class="icon-facebook-sign"></i> Like</span></a></li>
-            <li class="twitter"><a href="https://twitter.com/intent/tweet?text=http://uglow.github.io/first-post" title="Share on Twitter"><span class="count"><i class="icon-twitter-sign"></i> Tweet</span></a></li>
-            <li class="googleplus"><a href="https://plus.google.com/share?url=http://uglow.github.io/first-post" title="Share on Google Plus"><span class="count"><i class="icon-google-plus-sign"></i> +1</span></a></li>
+          <ul class="socialcount socialcount-small inline-list" data-url="http://uglow.github.io/Lessons-from-client-website-engagement" data-share-text="Notes from a recent mobile project">
+            <li class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=http://uglow.github.io/Lessons-from-client-website-engagement" title="Share on Facebook"><span class="count"><i class="icon-facebook-sign"></i> Like</span></a></li>
+            <li class="twitter"><a href="https://twitter.com/intent/tweet?text=http://uglow.github.io/Lessons-from-client-website-engagement" title="Share on Twitter"><span class="count"><i class="icon-twitter-sign"></i> Tweet</span></a></li>
+            <li class="googleplus"><a href="https://plus.google.com/share?url=http://uglow.github.io/Lessons-from-client-website-engagement" title="Share on Google Plus"><span class="count"><i class="icon-google-plus-sign"></i> +1</span></a></li>
           </ul>
         </div><!-- /.social-share -->
       </footer>
@@ -149,7 +168,7 @@
     <div class="read-more">
       
         <div class="read-more-header">
-          <a href="http://uglow.github.io" class="read-more-btn">Read More</a>
+          <a href="http://uglow.github.io/Grunt-Server" class="read-more-btn">Read More</a>
         </div><!-- /.read-more-header -->
         <div class="read-more-content">
           <h3><a href="http://uglow.github.io/Setup-Jekyll-For-GitHub" title="Setup Jekyll for Github Pages">Setup Jekyll for Github Pages</a></h3>
@@ -159,12 +178,12 @@
       <div class="read-more-list">
         
           <div class="list-item">
-            <h4><a href="http://uglow.github.io/Lessons-from-client-website-engagement" title="Notes from a recent mobile project">Notes from a recent mobile project</a></h4>
-            <span>Published on October 31, 2013</span>
+            <h4><a href="http://uglow.github.io/Grunt-Server" title="Grunt live-reloading">Grunt live-reloading</a></h4>
+            <span>Published on October 30, 2013</span>
           </div><!-- /.list-item -->
         
           <div class="list-item">
-            <h4><a href="http://uglow.github.io/Grunt-Server" title="Grunt live-reloading">Grunt live-reloading</a></h4>
+            <h4><a href="http://uglow.github.io/Front-End-Automation-Presentation-Greatness" title="Front-end Automation presentation greatness">Front-end Automation presentation greatness</a></h4>
             <span>Published on October 30, 2013</span>
           </div><!-- /.list-item -->
         

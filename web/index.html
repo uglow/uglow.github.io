@@ -123,6 +123,71 @@
   
 <article class="hentry" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
   <header>
+    <div class="entry-meta"><span class="entry-date date published updated"><time datetime="2013-11-01T00:00:00+11:00" itemprop="datePublished"><a href="http://uglow.github.io/Setup-Jekyll-For-GitHub">November 01, 2013</a></time></span><span class="author vcard" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name" class="fn"><a href="http://uglow.github.io/about" title="About Brett Uglow" itemprop="url">Brett Uglow</a></span></span></div><!-- /.entry-meta -->
+    
+      <h1 class="entry-title" itemprop="name"><a href="http://uglow.github.io/Setup-Jekyll-For-GitHub" rel="bookmark" title="Setup Jekyll for Github Pages" itemprop="url">Setup Jekyll for Github Pages</a></h1>
+    
+  </header>
+  <div class="entry-content" itemprop="description">
+    <p>Using <a href="alink: http://davidensinger.com/2013/04/deploying-jekyll-to-github-pages/">this article</a> as a guide and
+<a href="http://blog.coolaj86.com/articles/hosting-your-blog-on-github-pages.html">this one</a>:</p>
+
+<div class="highlight"><pre><code class="console"><span class="lineno"> 1</span> <span class="gp">#</span> rename current master to something <span class="k">else</span>
+<span class="lineno"> 2</span> <span class="go">git branch -m master master-old</span>
+<span class="lineno"> 3</span> <span class="gp">#</span> Create <span class="nb">source </span>branch from the old master and check it out
+<span class="lineno"> 4</span> <span class="go">git checkout master-old &amp;&amp; git checkout -b source</span>
+<span class="lineno"> 5</span> 
+<span class="lineno"> 6</span> <span class="gp">#</span> Delete the master branch
+<span class="lineno"> 7</span> <span class="go">git branch -D master</span>
+<span class="lineno"> 8</span> <span class="gp">#</span> Create a new master branch
+<span class="lineno"> 9</span> <span class="go">git checkout -b master</span>
+<span class="lineno">10</span> <span class="gp">#</span>Force the web subdirectory to be project root:
+<span class="lineno">11</span> <span class="go">git filter-branch --subdirectory-filter web/ -f</span>
+<span class="lineno">12</span> <span class="gp">#</span>Checkout the <span class="nb">source </span>branch:
+<span class="lineno">13</span> <span class="go">git checkout source</span>
+</code></pre></div>
+
+  </div><!-- /.entry-content -->
+</article><!-- /.hentry -->
+
+<article class="hentry" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    <div class="entry-meta"><span class="entry-date date published updated"><time datetime="2013-10-31T00:00:00+11:00" itemprop="datePublished"><a href="http://uglow.github.io/Lessons-from-client-website-engagement">October 31, 2013</a></time></span><span class="author vcard" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name" class="fn"><a href="http://uglow.github.io/about" title="About Brett Uglow" itemprop="url">Brett Uglow</a></span></span></div><!-- /.entry-meta -->
+    
+      <h1 class="entry-title" itemprop="name"><a href="http://uglow.github.io/Lessons-from-client-website-engagement" rel="bookmark" title="Notes from a recent mobile project" itemprop="url">Notes from a recent mobile project</a></h1>
+    
+  </header>
+  <div class="entry-content" itemprop="description">
+    <p>I have been developing a website for a top-tier client in Melbourne. The site is built using AngularJS (v1.1.5 as of time of writing), SASS, Compass and GruntJs to pull it all together. The development team consisted of myself as lead dev, Mario Skouros, Peter Mescalchin and Steven Yip, with assistance from Michael Black and Vlado Grancaric. Well done guys!</p>
+
+<h1 id="design">Design</h1>
+
+<p>The visual and interface design was by George Metaxas, who is part of the client’s design team.</p>
+
+<h1 id="under-the-hood">Under the hood</h1>
+
+<p>The site is part application, part CMS-driven website. It was technically challenging to get the client’s CMS to produce the content in a format and structure that AngularJS could consuem, but we found a solution that was workable.</p>
+
+<p>The site is build for modern browsers (Android 2.3+, i-devices, Blackberry, …) and should work with desktop browsers as well (recent versions of Chrome, Safari and Firefox). We elected early on not to support IE because, well, IE is not very standards-compliant. But in our case, there are not many IE-users of the old mobile site, so it wasn’t worth investing in at this point in time.</p>
+
+<h2 id="engine--chassis---angularjs">Engine &amp; Chassis - AngularJS</h2>
+
+<p>We used AngularJS 1.1.5 - which added nice animation support and the ability to cancel timeouts. Using Angular was fantastic, but there were difficulties getting the Apache re-write rules to work for when the site was at the root and when it was a sub-directory site. Overall, I’d highly recommend using it for web applications and websites (up to N-hundred pages).</p>
+
+<h2 id="bolts---gruntjs">Bolts - GruntJS</h2>
+
+<p>GruntJS is a fantastic tool for front-end devs. It allowed us to integrate font-icon-building, image optimization and source-code minimisation into our build process. Combined with Apache’s mod_deflate, we were able to get the home page download from 1.2MB to less than 300kB (75% reduction).</p>
+
+<h2 id="paint---html5--css3">Paint - HTML5 &amp; CSS3</h2>
+
+<p>The site design was implemented using SASS &amp; Compass (with HTML). This kept the CSS from growing too big and the variable names allow us to maintain things more easily going forward. The CSS3 animation support in the Compass 0.13.alpha.4 helped us to do some nice CSS animations (like the loading spinner).</p>
+
+
+  </div><!-- /.entry-content -->
+</article><!-- /.hentry -->
+
+<article class="hentry" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
     <div class="entry-meta"><span class="entry-date date published updated"><time datetime="2013-10-30T00:00:00+11:00" itemprop="datePublished"><a href="http://uglow.github.io/Grunt-Server">October 30, 2013</a></time></span><span class="author vcard" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name" class="fn"><a href="http://uglow.github.io/about" title="About Brett Uglow" itemprop="url">Brett Uglow</a></span></span></div><!-- /.entry-meta -->
     
       <h1 class="entry-title" itemprop="name"><a href="http://uglow.github.io/Grunt-Server" rel="bookmark" title="Grunt live-reloading" itemprop="url">Grunt live-reloading</a></h1>
@@ -313,23 +378,6 @@ that the version of <code>grunt-contrib-watch</code> might be out-of date.</p>
   </div><!-- /.entry-content -->
 </article><!-- /.hentry -->
 
-<article class="hentry" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-  <header>
-    <div class="entry-meta"><span class="entry-date date published updated"><time datetime="2013-10-22T00:00:00+11:00" itemprop="datePublished"><a href="http://uglow.github.io/first-post">October 22, 2013</a></time></span><span class="author vcard" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name" class="fn"><a href="http://uglow.github.io/about" title="About Brett Uglow" itemprop="url">Brett Uglow</a></span></span></div><!-- /.entry-meta -->
-    
-      <h1 class="entry-title" itemprop="name"><a href="http://uglow.github.io/first-post" rel="bookmark" title="Ugl<span class='sun'>&#9728;</span>w on GitHub" itemprop="url">Ugl<span class='sun'>&#9728;</span>w on GitHub</a></h1>
-    
-  </header>
-  <div class="entry-content" itemprop="description">
-    <p>A blog site that’s not a pain-in-the-bottom to setup and configure!</p>
-
-<p><a href="http://jekyllrb.com/">Jekyll</a> is pretty cool, but I learned more from <a href="http://mmistakes.github.io/hpstr-jekyll-theme/theme-setup/">this theme</a>.</p>
-
-<p>The <a href="http://daringfireball.net/projects/markdown/basics">MarkDown Reference Guide</a> is also very useful.</p>
-
-  </div><!-- /.entry-content -->
-</article><!-- /.hentry -->
-
 
 <div class="pagination">
   
@@ -342,9 +390,15 @@ that the version of <code>grunt-contrib-watch</code> might be out-of date.</p>
       
     </li>
     
+      <li>
+        
+          <a href="http://uglow.github.io/page2">2</a>
+        
+      </li>
+    
   </ul>
   
-    Next
+    <a href="http://uglow.github.io/page2" class="btn">Next</a>
   
 
 </div>

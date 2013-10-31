@@ -4,13 +4,88 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://uglow.github.io/feed.xml" />
 <link rel="alternate" type="text/html" href="http://uglow.github.io" />
-<updated>2013-10-31T23:04:26+11:00</updated>
+<updated>2013-11-01T09:08:58+11:00</updated>
 <id>http://uglow.github.io/</id>
 <author>
   <name>Brett Uglow</name>
   <uri>http://uglow.github.io/</uri>
   <email>uifx@uifx.com</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[Setup Jekyll for Github Pages]]></title>
+  <link>http://uglow.github.io/Setup-Jekyll-For-GitHub</link>
+  <id>http://uglow.github.io/Setup-Jekyll-For-GitHub</id>
+  <updated>2013-11-01T00:00:00-00:00</updated>
+  <published>2013-11-01T00:00:00+11:00</published>
+  
+  <author>
+    <name>Brett Uglow</name>
+    <uri>http://uglow.github.io</uri>
+    <email>uifx@uifx.com</email>
+  </author>
+  <content type="html">&lt;p&gt;Using &lt;a href=&quot;alink: http://davidensinger.com/2013/04/deploying-jekyll-to-github-pages/&quot;&gt;this article&lt;/a&gt; as a guide and
+&lt;a href=&quot;http://blog.coolaj86.com/articles/hosting-your-blog-on-github-pages.html&quot;&gt;this one&lt;/a&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;console&quot;&gt;&lt;span class=&quot;lineno&quot;&gt; 1&lt;/span&gt; &lt;span class=&quot;gp&quot;&gt;#&lt;/span&gt; rename current master to something &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 2&lt;/span&gt; &lt;span class=&quot;go&quot;&gt;git branch -m master master-old&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 3&lt;/span&gt; &lt;span class=&quot;gp&quot;&gt;#&lt;/span&gt; Create &lt;span class=&quot;nb&quot;&gt;source &lt;/span&gt;branch from the old master and check it out
+&lt;span class=&quot;lineno&quot;&gt; 4&lt;/span&gt; &lt;span class=&quot;go&quot;&gt;git checkout master-old &amp;amp;&amp;amp; git checkout -b source&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 5&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt; 6&lt;/span&gt; &lt;span class=&quot;gp&quot;&gt;#&lt;/span&gt; Delete the master branch
+&lt;span class=&quot;lineno&quot;&gt; 7&lt;/span&gt; &lt;span class=&quot;go&quot;&gt;git branch -D master&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 8&lt;/span&gt; &lt;span class=&quot;gp&quot;&gt;#&lt;/span&gt; Create a new master branch
+&lt;span class=&quot;lineno&quot;&gt; 9&lt;/span&gt; &lt;span class=&quot;go&quot;&gt;git checkout -b master&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;10&lt;/span&gt; &lt;span class=&quot;gp&quot;&gt;#&lt;/span&gt;Force the web subdirectory to be project root:
+&lt;span class=&quot;lineno&quot;&gt;11&lt;/span&gt; &lt;span class=&quot;go&quot;&gt;git filter-branch --subdirectory-filter web/ -f&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;12&lt;/span&gt; &lt;span class=&quot;gp&quot;&gt;#&lt;/span&gt;Checkout the &lt;span class=&quot;nb&quot;&gt;source &lt;/span&gt;branch:
+&lt;span class=&quot;lineno&quot;&gt;13&lt;/span&gt; &lt;span class=&quot;go&quot;&gt;git checkout source&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+  &lt;p&gt;&lt;a href=&quot;http://uglow.github.io/Setup-Jekyll-For-GitHub&quot;&gt;Setup Jekyll for Github Pages&lt;/a&gt; was originally published by Brett Uglow at &lt;a href=&quot;http://uglow.github.io&quot;&gt;ugl<span class='sun'>&#9728;</span>w&lt;/a&gt; on November 01, 2013.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Notes from a recent mobile project]]></title>
+  <link>http://uglow.github.io/Lessons-from-client-website-engagement</link>
+  <id>http://uglow.github.io/Lessons-from-client-website-engagement</id>
+  <updated>2013-10-31T00:00:00-00:00</updated>
+  <published>2013-10-31T00:00:00+11:00</published>
+  
+  <author>
+    <name>Brett Uglow</name>
+    <uri>http://uglow.github.io</uri>
+    <email>uifx@uifx.com</email>
+  </author>
+  <content type="html">&lt;p&gt;I have been developing a website for a top-tier client in Melbourne. The site is built using AngularJS (v1.1.5 as of time of writing), SASS, Compass and GruntJs to pull it all together. The development team consisted of myself as lead dev, Mario Skouros, Peter Mescalchin and Steven Yip, with assistance from Michael Black and Vlado Grancaric. Well done guys!&lt;/p&gt;
+
+&lt;h1 id=&quot;design&quot;&gt;Design&lt;/h1&gt;
+
+&lt;p&gt;The visual and interface design was by George Metaxas, who is part of the client’s design team.&lt;/p&gt;
+
+&lt;h1 id=&quot;under-the-hood&quot;&gt;Under the hood&lt;/h1&gt;
+
+&lt;p&gt;The site is part application, part CMS-driven website. It was technically challenging to get the client’s CMS to produce the content in a format and structure that AngularJS could consuem, but we found a solution that was workable.&lt;/p&gt;
+
+&lt;p&gt;The site is build for modern browsers (Android 2.3+, i-devices, Blackberry, …) and should work with desktop browsers as well (recent versions of Chrome, Safari and Firefox). We elected early on not to support IE because, well, IE is not very standards-compliant. But in our case, there are not many IE-users of the old mobile site, so it wasn’t worth investing in at this point in time.&lt;/p&gt;
+
+&lt;h2 id=&quot;engine--chassis---angularjs&quot;&gt;Engine &amp;amp; Chassis - AngularJS&lt;/h2&gt;
+
+&lt;p&gt;We used AngularJS 1.1.5 - which added nice animation support and the ability to cancel timeouts. Using Angular was fantastic, but there were difficulties getting the Apache re-write rules to work for when the site was at the root and when it was a sub-directory site. Overall, I’d highly recommend using it for web applications and websites (up to N-hundred pages).&lt;/p&gt;
+
+&lt;h2 id=&quot;bolts---gruntjs&quot;&gt;Bolts - GruntJS&lt;/h2&gt;
+
+&lt;p&gt;GruntJS is a fantastic tool for front-end devs. It allowed us to integrate font-icon-building, image optimization and source-code minimisation into our build process. Combined with Apache’s mod_deflate, we were able to get the home page download from 1.2MB to less than 300kB (75% reduction).&lt;/p&gt;
+
+&lt;h2 id=&quot;paint---html5--css3&quot;&gt;Paint - HTML5 &amp;amp; CSS3&lt;/h2&gt;
+
+&lt;p&gt;The site design was implemented using SASS &amp;amp; Compass (with HTML). This kept the CSS from growing too big and the variable names allow us to maintain things more easily going forward. The CSS3 animation support in the Compass 0.13.alpha.4 helped us to do some nice CSS animations (like the loading spinner).&lt;/p&gt;
+
+
+  &lt;p&gt;&lt;a href=&quot;http://uglow.github.io/Lessons-from-client-website-engagement&quot;&gt;Notes from a recent mobile project&lt;/a&gt; was originally published by Brett Uglow at &lt;a href=&quot;http://uglow.github.io&quot;&gt;ugl<span class='sun'>&#9728;</span>w&lt;/a&gt; on October 31, 2013.&lt;/p&gt;</content>
+</entry>
 
 
 <entry>
