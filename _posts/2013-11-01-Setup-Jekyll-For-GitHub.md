@@ -25,6 +25,7 @@ git branch -D master
 git checkout -b master
 #Force the web subdirectory to be project root:
 git filter-branch --subdirectory-filter web/ -f
+#Checkout the source branch:
+git checkout source
 
-
-{% endhighlight}
+{% endhighlight %}
