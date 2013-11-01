@@ -12,7 +12,9 @@ share: true
 Using [this article](alink: http://davidensinger.com/2013/04/deploying-jekyll-to-github-pages/) as a guide and
 [this one](http://blog.coolaj86.com/articles/hosting-your-blog-on-github-pages.html):
 
-You first need to place all your page source into it's own branch:
+##Setup
+Basically what we will do is commit the source code into a `source` branch and have the compiled code on the master branch:
+
 {% highlight console  %}
 # rename current master to something else
 git branch -m master master-old
@@ -20,17 +22,47 @@ git branch -m master master-old
 git checkout master-old && git checkout -b source
 {% endhighlight %}
 
-Then you need to create a shell script with the `git` commands in it which will re-create (publish)
-the `master` branch using the output directory (web) as it's root. After pushing that, checkout the `source` branch again.
+## Publishing Steps
+
+1. Build your site from the `source` branch into `/web` (your output folder). I'm using `grunt` to do this step.
+1. Checkout the `master` branch
+1. Remove the existing content files from `master`
+1. Copy the new site content into the root project directory
+1. Add the new site content to git & push to origin
+
+Here's a script to do Step 2 onwards, which I call from `grunt` after doing step 1:
 
 {% highlight console  %}
-# Delete the master branch
-git branch -D master
-# Create a new master branch
-git checkout -b master
-#Force the web subdirectory to be project root:
-git filter-branch --subdirectory-filter web/ -f
-#Checkout the source branch:
+git status
+
+# Checkout master branch
+git checkout master
+
+# Rename the /web directory to .web
+mv web .web
+mv node_modules .node_modules
+ 
+# Remove all non . files
+rm -rf *
+
+# Copy everything from .web to current dir
+rsync -a .web/ ./
+ 
+# Remove .web 
+rm -rf .web
+
+# Add everything
+git add .
+git commit -m "Updated compiled site"
+git push origin master
+
+# Remove everything again
+rm -rf *
+
+# Re-add node_modules
+mv .node_modules node_modules
+
+# checkout source again
 git checkout source
 
 {% endhighlight %}
