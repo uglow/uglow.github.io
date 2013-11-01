@@ -18,7 +18,9 @@ rm -rf .web
 
 # Add everything
 git add .
-git commit -m "Updated compiled site"
+
+# Commit using the same commit message as from the 'source' branch
+git commit -C source
 git push origin master
 
 # Remove everything again
