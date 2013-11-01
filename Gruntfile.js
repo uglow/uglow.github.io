@@ -195,10 +195,10 @@ module.exports = function(grunt) {
 		grunt.log.writeln(envName + ' environment <<<--------------------------------------');
 	});
 	
-	grunt.registerTask('_build', 'PRIVATE - creates an environment-specific build', ['clean:env', 'exec:build', 'compass:build', 'copy:env']);
+	grunt.registerTask('_build', 'PRIVATE - creates an environment-specific build', ['clean:env', 'exec:build', 'compass:build']);
 	
 	grunt.registerTask('dev', ['env:dev', '_build', 'connect:dev', 'watch']);
 	grunt.registerTask('prod', ['env:prod', '_build', 'connect:prod']);
 	
-	grunt.registerTask('publish', ['exec:publish']);
+	grunt.registerTask('publish', ['env:prod', '_build', 'exec:publish']);
 };

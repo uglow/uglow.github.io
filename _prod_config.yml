@@ -1,2 +1,2 @@
 # PRODUCTION overrides
-liveReloadTag:    
+destination:      web
