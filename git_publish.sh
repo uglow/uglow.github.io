@@ -1,10 +1,7 @@
 git status
 
-# Delete the master branch
-git branch -D master
-
-# Create a new master branch
-git checkout -b master
+# Checkout the master branch
+git checkout master
 
 #Force the web subdirectory to be project root:
 git filter-branch --subdirectory-filter web/ -f
