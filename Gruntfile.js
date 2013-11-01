@@ -149,6 +149,9 @@ module.exports = function(grunt) {
 		exec: {
 			build: {
 				cmd: 'jekyll build --config _config.yml,<%= env.environment.configFile %>'
+			},
+			publish: {
+				cmd: './git_publish.sh'	// Need to run chmod 755 on this file
 			}
 		},
 		
@@ -192,7 +195,10 @@ module.exports = function(grunt) {
 		grunt.log.writeln(envName + ' environment <<<--------------------------------------');
 	});
 	
+	grunt.registerTask('_build', 'PRIVATE - creates an environment-specific build', ['clean:env', 'exec:build', 'compass:build', 'copy:env']);
 	
-	grunt.registerTask('dev', ['env:dev', 'clean:env', 'exec:build', 'compass:build', 'copy:env', 'connect:dev', 'watch']);
-	grunt.registerTask('prod', ['env:prod', 'clean:env', 'exec:build', 'compass:build', 'copy:env', 'connect:prod']);
+	grunt.registerTask('dev', ['env:dev', '_build', 'connect:dev', 'watch']);
+	grunt.registerTask('prod', ['env:prod', '_build', 'connect:prod']);
+	
+	grunt.registerTask('publish', ['env:prod', '_build', 'exec:publish']);
 };

@@ -132,19 +132,25 @@
     <p>Using <a href="alink: http://davidensinger.com/2013/04/deploying-jekyll-to-github-pages/">this article</a> as a guide and
 <a href="http://blog.coolaj86.com/articles/hosting-your-blog-on-github-pages.html">this one</a>:</p>
 
-<div class="highlight"><pre><code class="console"><span class="lineno"> 1</span> <span class="gp">#</span> rename current master to something <span class="k">else</span>
-<span class="lineno"> 2</span> <span class="go">git branch -m master master-old</span>
-<span class="lineno"> 3</span> <span class="gp">#</span> Create <span class="nb">source </span>branch from the old master and check it out
-<span class="lineno"> 4</span> <span class="go">git checkout master-old &amp;&amp; git checkout -b source</span>
-<span class="lineno"> 5</span> 
-<span class="lineno"> 6</span> <span class="gp">#</span> Delete the master branch
-<span class="lineno"> 7</span> <span class="go">git branch -D master</span>
-<span class="lineno"> 8</span> <span class="gp">#</span> Create a new master branch
-<span class="lineno"> 9</span> <span class="go">git checkout -b master</span>
-<span class="lineno">10</span> <span class="gp">#</span>Force the web subdirectory to be project root:
-<span class="lineno">11</span> <span class="go">git filter-branch --subdirectory-filter web/ -f</span>
-<span class="lineno">12</span> <span class="gp">#</span>Checkout the <span class="nb">source </span>branch:
-<span class="lineno">13</span> <span class="go">git checkout source</span>
+<p>You first need to place all your page source into it’s own branch:</p>
+
+<div class="highlight"><pre><code class="console"><span class="gp">#</span> rename current master to something <span class="k">else</span>
+<span class="go">git branch -m master master-old</span>
+<span class="gp">#</span> Create <span class="nb">source </span>branch from the old master and check it out
+<span class="go">git checkout master-old &amp;&amp; git checkout -b source</span>
+</code></pre></div>
+
+<p>Then you need to create a shell script with the <code>git</code> commands in it which will re-create (publish)
+the <code>master</code> branch using the output directory (web) as it’s root. After pushing that, checkout the <code>source</code> branch again.</p>
+
+<div class="highlight"><pre><code class="console"><span class="gp">#</span> Delete the master branch
+<span class="go">git branch -D master</span>
+<span class="gp">#</span> Create a new master branch
+<span class="go">git checkout -b master</span>
+<span class="gp">#</span>Force the web subdirectory to be project root:
+<span class="go">git filter-branch --subdirectory-filter web/ -f</span>
+<span class="gp">#</span>Checkout the <span class="nb">source </span>branch:
+<span class="go">git checkout source</span>
 </code></pre></div>
 
   </div><!-- /.entry-content -->
