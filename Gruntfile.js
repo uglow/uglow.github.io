@@ -200,5 +200,5 @@ module.exports = function(grunt) {
 	grunt.registerTask('dev', ['env:dev', '_build', 'connect:dev', 'watch']);
 	grunt.registerTask('prod', ['env:prod', '_build', 'connect:prod']);
 	
-	grunt.registerTask('publish', ['env:prod', '_build', 'exec:publish']);
+	grunt.registerTask('publish', ['exec:publish']);
 };
