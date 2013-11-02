@@ -34,3 +34,4 @@ git checkout source
 
 # undo any pending changes to any files
 git checkout -- .
+git status
