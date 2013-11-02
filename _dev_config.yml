@@ -1,5 +1,6 @@
 # DEV overrides
 destination:      dev
 title:            ugl<span class='sun'>&#9728;</span>w DEV
+textTitle:        ugl&#9728;w DEV
 url:         
 liveReloadTag:    <script src="//localhost:35729/livereload.js"></script>     

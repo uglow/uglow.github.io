@@ -1,7 +1,8 @@
 # COMMON CONFIG with PRODUCTION DEFAULTS
 title:            ugl<span class='sun'>&#9728;</span>w
+textTitle:        ugl&#9728;w
 description:      Memorable moments in the life of a creator 
-disqus_shortname: 
+disqus_shortname: uglowsblog
 #Comment out url when working locally to resolve base urls correctly
 url:              http://uglow.github.io
 #Where the "Home" on the nav menu takes you

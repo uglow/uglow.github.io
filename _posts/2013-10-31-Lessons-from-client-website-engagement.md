@@ -5,10 +5,10 @@ title: "Notes from a recent mobile project"
 description: ""
 modified: 2013-10-31
 tags: [client, mobile, web, SASS, HTML5, CSS3, AngularJS, CMS, Compass]
-image:
-  feature: abstract2.jpg
 comments: true
 share: true
+image:
+  feature: abstract-2.jpg
 ---
 
 I have been developing a website for a top-tier client in Melbourne. The site is built using AngularJS (v1.1.5 as of time of writing), SASS, Compass and GruntJs to pull it all together. The development team consisted of myself as lead dev, Mario Skouros, Peter Mescalchin and Steven Yip, with assistance from Michael Black and Vlado Grancaric. Well done guys!
