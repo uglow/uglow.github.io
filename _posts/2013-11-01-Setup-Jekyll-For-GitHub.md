@@ -67,5 +67,7 @@ mv .node_modules node_modules
 # checkout source again
 git checkout source
 
+# undo any pending changes to any files
+git checkout -- .
 
 {% endhighlight %}
