@@ -1,15 +1,32 @@
----
-layout: nil
----
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>{{ site.url }}</loc>
+        <loc>http://uglow.github.io</loc>
     </url>
     
-    {% for post in site.posts %}
+    
     <url>
-        <loc>{{ site.url }}{{ post.url }}</loc>
+        <loc>http://uglow.github.io/Setup-Jekyll-For-GitHub</loc>
     </url>
-    {% endfor %}
+    
+    <url>
+        <loc>http://uglow.github.io/Lessons-from-client-website-engagement</loc>
+    </url>
+    
+    <url>
+        <loc>http://uglow.github.io/Grunt-Server</loc>
+    </url>
+    
+    <url>
+        <loc>http://uglow.github.io/Front-End-Automation-Presentation-Greatness</loc>
+    </url>
+    
+    <url>
+        <loc>http://uglow.github.io/Australia-Post-mobile-website-is-live</loc>
+    </url>
+    
+    <url>
+        <loc>http://uglow.github.io/first-post</loc>
+    </url>
+    
 </urlset>
