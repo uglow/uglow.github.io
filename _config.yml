@@ -38,6 +38,8 @@ bing_verify:
 links:
   - title: Git tips
     url: /pages/githelp.html
+  - title: RegEx tips
+    url: /pages/regexhelp.html
   - title: UIFX
     url: http://www.uifx.com
     external: true
