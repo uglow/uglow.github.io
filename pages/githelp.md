@@ -8,6 +8,7 @@ tags: [git, tips]
 comments: false
 share: true
 ---
+[http://ndpsoftware.com/git-cheatsheet.html](Git Cheatsheet)
 
 ##Common commands
 
@@ -49,11 +50,37 @@ git log -1 --pretty=%B  # Prints just the commit message{% endhighlight %}</dd>
 git tag -d _tagName_
 git push origin :refs/tags/_tagName_{% endhighlight %}</dd>
 
+<dt>Revert - reverts any _public_ commits done on the repository (current branch)
+ Revert Commit(s) from the history by generating another commit that reverses the impact of the commit that you are trying to revert.</dt>
+<dd>{% highlight console %}
+git commit -m "changes that will be reverted"
+git revert HEAD     # newset commit points to previous commit
+git revert HEAD~2   # newset commit points to the commit 2 commits ago{% endhighlight %}</dd>
+
 <dt>Revert all unstaged changes</dt>
 <dd>{% highlight console %}
 git checkout -- .  # . = all changed files{% endhighlight %}</dd>
 
+<dt>Reset -  It CHANGES the history, whereas revert ADDS to the history. BEWARE! Is designed only for _local_ changes</dt>
+<dd>{% highlight console %}
+# Create a new file called `foo.java` and add some code to it
+
+# Commit it to the project history
+git add foo.java
+git commit -m "Start developing a crazy feature"
+
+# Edit `foo.java` again and change some other tracked files, too
+
+# Commit another snapshot
+git commit -a -m "Continue my crazy feature"
+
+# Decide to scrap the feature and remove the associated commits
+git reset --hard HEAD~2
+
+{% endhighlight %}</dd>
+
 </dl>
 
 
+##Typical Workflow
 
