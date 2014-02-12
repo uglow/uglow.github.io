@@ -131,11 +131,3 @@
     transform: rotate(360deg);
   }
 }
-
-
-/* Extra tags */
-abbr {
-	color: #080;
-	cursor: pointer;
-	border-bottom: 1px dotted #080;
-}
