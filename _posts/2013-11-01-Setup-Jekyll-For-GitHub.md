@@ -3,7 +3,7 @@ published: true
 layout: post
 title: "Setup Jekyll for Github Pages"
 description: ""
-modified: 2013-11-01
+modified: 2014-02-03
 tags: [git, github, jekyll, newbie]
 comments: true
 share: true 
@@ -24,13 +24,14 @@ git checkout master-old && git checkout -b source
 
 ## Publishing Steps
 
+1. **Commit your new content to the source branch!!!**
 1. Build your site from the `source` branch into `/web` (your output folder). I'm using `grunt` to do this step.
 1. Checkout the `master` branch
 1. Remove the existing content files from `master`
 1. Copy the new site content into the root project directory
 1. Add the new site content to git & push to origin
 
-Here's a script to do Step 2 onwards, which I call from `grunt` after doing step 1:
+Here's a script to do Step 3 onwards, which I call from `grunt` after doing step 1:
 
 {% highlight console  %}
 git status
