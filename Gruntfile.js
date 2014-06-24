@@ -201,4 +201,7 @@ module.exports = function(grunt) {
 	grunt.registerTask('prod', ['env:prod', '_build', 'connect:prod']);
 	
 	grunt.registerTask('publish', ['env:prod', '_build', 'exec:publish']);
+	
+	// Default Task
+	grunt.registerTask('default', ['dev']);
 };

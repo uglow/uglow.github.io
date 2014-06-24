@@ -9,7 +9,7 @@ comments: true
 share: true 
 ---
 
-Using [this article](alink: http://davidensinger.com/2013/04/deploying-jekyll-to-github-pages/) as a guide and
+Using [this article](http://davidensinger.com/2013/04/deploying-jekyll-to-github-pages/) as a guide and
 [this one](http://blog.coolaj86.com/articles/hosting-your-blog-on-github-pages.html):
 
 ##Setup
