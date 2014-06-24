@@ -20,4 +20,4 @@ I've uploaded the [presentation (PPT, 1.9MB)](/assets/files/Australia_Post_Mobil
 
 The accompanying demo files:
 
-{% gist 34450d0e31c2b6c56759 %}
+{% gist uglow/34450d0e31c2b6c56759 %}
