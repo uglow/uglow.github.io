@@ -13,7 +13,9 @@ module Jekyll
     alias orig_initialize initialize
     def initialize(site, base, dir, name)
       orig_initialize(site, base, dir, name)
-      self.tags = self.data.pluralized_array("tag", "tags")
+      # Old version 
+      # self.tags = self.data.pluralized_array("tag", "tags")
+      self.tags = Utils.pluralized_array_from_hash(self.data, "tag", "tags")
     end
  
   end

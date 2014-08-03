@@ -165,7 +165,8 @@ module.exports = function(grunt) {
 			dev: {
 				options: {
 					port: 4000,
-					base: '<%= env.environment.outputDir %>'
+					base: '<%= env.environment.outputDir %>',
+					open: true
 				}
 			},
 			prod: {

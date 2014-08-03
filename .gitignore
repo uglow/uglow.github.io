@@ -2,3 +2,4 @@ _site
 .sass-cache
 dev
 web
+Gemfile.lock
