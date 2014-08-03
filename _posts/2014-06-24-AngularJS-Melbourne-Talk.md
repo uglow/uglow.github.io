@@ -4,7 +4,7 @@ layout: post
 title: "AngularJS Melbourne talk"
 description: ""
 modified: 2014-06-26
-tags: [angularjs, accessibility, organising code, forms]
+tags: [AngularJS, accessibility, organising code, forms]
 comments: true
 share: true
 image:
