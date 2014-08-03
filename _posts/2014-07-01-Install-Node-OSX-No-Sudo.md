@@ -1,12 +1,16 @@
 ---
 published: true
 layout: post
-title: "Install Node on OSX without needing to later use sudo to install NPM packages"
+title: "Simple sudo-less NPM installs on OSX"
 description: ""
 modified: 2014-07-01
 tags: [node, npm, sudo, osx]
 comments: true
 share: true 
+image:
+  feature: abstract-2.jpg
+  credit: dargadgetz
+  creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
 ---
 
 OK, so I finally understand [why it's bad](http://blog.hood.ie/2014/02/why-you-shouldnt-use-sudo-with-npm/) to use `sudo npm install`.
