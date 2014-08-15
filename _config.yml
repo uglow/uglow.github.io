@@ -7,7 +7,7 @@ disqus_shortname: uglowsblog
 url:              http://uglow.github.io
 #Where the "Home" on the nav menu takes you
 home:             http://uglow.github.io
-liveReloadTag:    
+liveReloadTag:   
 
 # Owner/author information
 owner:
@@ -28,7 +28,7 @@ owner:
   google_plus:   
 
 # Analytics and webmaster tools stuff goes here
-google_analytics:   
+google_analytics: UA-53871788-1
 google_verify:      
 # https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
 bing_verify:         
