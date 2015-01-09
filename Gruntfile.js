@@ -180,9 +180,9 @@ module.exports = function(grunt) {
     'gh-pages': {
       options: {
         base: 'web',
-        push: true,
-        branch: 'gh-pages',
-        user: 'uglow'
+        branch: 'master',
+        user: 'uglow',
+        push: true
       },
       src: ['**']
     }
