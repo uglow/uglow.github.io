@@ -1,10 +1,10 @@
 'use strict';
 module.exports = function(grunt) {
 	// To save package change after install: $ sudo npm install package_name --save-dev
-	
+
 	// Load tasks
 	require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
-	
+
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 		environments: {
@@ -23,7 +23,7 @@ module.exports = function(grunt) {
 				configFile: '_prod_config.yml'
 			}
 		},
-	
+
 		jshint: {
 			options: {
 				jshintrc: '.jshintrc'
@@ -82,7 +82,7 @@ module.exports = function(grunt) {
 				}]
 			}
 		},
-		
+
 		watch: {
 			less: {
 				files: [
@@ -91,25 +91,25 @@ module.exports = function(grunt) {
 				],
 				tasks: ['recess']
 			},
-			
+
 //			js: {
 //				files: [
 //					'<%= jshint.all %>'
 //				],
 //				tasks: ['jshint','uglify']
 //			},
-			
+
 			html: {
 				files: ['*.yml', '*.html', '_includes/*.html', '_layouts/*.html', 'pages/**/*.html', '*.md', '_posts/*.md', 'pages/*.md'],
 				tasks: ['<%= env.environment.envName %>', 'exec:build', 'copy:env'],
 			},
-			
+
 			sass: {
 				files: ['assets/sass/**'],
 				tasks: ['<%= env.environment.envName %>', 'compass:build'],
 				livereload: true
 			},
-			
+
 			dev: {
 				files: ['dev/**/*.html', 'dev/**/*.css'],
 				tasks: ['<%= env.environment.envName %>'],
@@ -118,7 +118,7 @@ module.exports = function(grunt) {
 				}
 			}
 		},
-		
+
 		clean: {
 			dist: [
 				'assets/css/main.min.css',
@@ -126,8 +126,8 @@ module.exports = function(grunt) {
 			],
 			env: ['<%= env.environment.outputDir %>']
 		},
-		
-		
+
+
 		// Compass Info: https://github.com/gruntjs/grunt-contrib-compass
 		compass: {
 			options: {
@@ -143,9 +143,9 @@ module.exports = function(grunt) {
 				options: {
 					force: true
 				}
-			}				
+			}
 		},
-		
+
 		exec: {
 			build: {
 				cmd: 'jekyll build --config _config.yml,<%= env.environment.configFile %>'
@@ -154,13 +154,13 @@ module.exports = function(grunt) {
 				cmd: './git_publish.sh'	// Need to run chmod 755 on this file
 			}
 		},
-		
+
 		copy: {
 			env: {
 				files: [{expand: true, flatten: false, cwd:'_site', src: '**/*', dest: '<%= env.environment.outputDir %>'}]
 			}
 		},
-		
+
 		connect: {
 			dev: {
 				options: {
@@ -176,10 +176,19 @@ module.exports = function(grunt) {
 					keepalive: true
 				}
 			}
-		}
+		},
+    'gh-pages': {
+      options: {
+        base: 'web',
+        push: true,
+        branch: 'gh-pages',
+        user: 'uglow'
+      },
+      src: ['**']
+    }
 	});
-	
-	
+
+
 	grunt.registerTask('env', 'Set environment variables for use by other tasks.', function(environment) {
 		if (environment === null || environment === undefined) {
 			grunt.warn('You must specify the environment as either DEV or PROD.');
@@ -188,21 +197,21 @@ module.exports = function(grunt) {
 		// Store the environment definition in 'env.environment'
 		var envName = '' + environment.toLowerCase();
 		var envDefinition = grunt.config.get('environments.' + envName);
-		
+
 		grunt.config.set('env.environment', envDefinition);
-		
+
 		var envName = grunt.config.get('env.environment.name');
-		
+
 		grunt.log.writeln(envName + ' environment <<<--------------------------------------');
 	});
-	
+
 	grunt.registerTask('_build', 'PRIVATE - creates an environment-specific build', ['clean:env', 'exec:build', 'compass:build']);
-	
+
 	grunt.registerTask('dev', ['env:dev', '_build', 'connect:dev', 'watch']);
 	grunt.registerTask('prod', ['env:prod', '_build', 'connect:prod']);
-	
-	grunt.registerTask('publish', ['env:prod', '_build', 'exec:publish']);
-	
+
+	grunt.registerTask('publish', ['env:prod', '_build', 'gh-pages']);
+
 	// Default Task
 	grunt.registerTask('default', ['dev']);
 };
