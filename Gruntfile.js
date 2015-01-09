@@ -149,9 +149,6 @@ module.exports = function(grunt) {
 		exec: {
 			build: {
 				cmd: 'jekyll build --config _config.yml,<%= env.environment.configFile %>'
-			},
-			publish: {
-				cmd: './git_publish.sh'	// Need to run chmod 755 on this file
 			}
 		},
 
