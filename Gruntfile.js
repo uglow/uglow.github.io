@@ -200,7 +200,7 @@ module.exports = function(grunt) {
 	grunt.registerTask('_build', 'PRIVATE - creates an environment-specific build', ['clean:env', 'exec:build', 'stylus:compile']);
 
 	grunt.registerTask('dev', ['env:dev', '_build', 'connect:dev', 'watch']);
-	grunt.registerTask('prod', ['env:prod', '_build', 'connect:prod']);
+	grunt.registerTask('prod', ['env:prod', 'imagemin', '_build', 'connect:prod']);
 
 	grunt.registerTask('publish', ['env:prod', '_build', 'gh-pages']);
 

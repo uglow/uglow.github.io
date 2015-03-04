@@ -8,7 +8,7 @@ tags: [angularjs, ngConf, 2015]
 comments: true
 share: true 
 image:
-  feature: ngConf2.jpg
+  feature: ngConf1.jpg
   credit: Me
   creditlink: 
 ---
