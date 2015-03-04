@@ -172,7 +172,7 @@ module.exports = function(grunt) {
     'gh-pages': {
       options: {
         base: 'web',
-        branch: 'master',
+        branch: 'master',       // Where to publish the pages
         user: 'uglow',
         push: true
       },
