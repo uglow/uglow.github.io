@@ -1,9 +1,9 @@
 'use strict';
 module.exports = function(grunt) {
-	// To save package change after install: $ sudo npm install package_name --save-dev
 
-	// Load tasks
-	require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
+  // jit-grunt saves about 3 seconds per cycle now - valuable!
+  require('jit-grunt')(grunt, {
+  });
 
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
@@ -91,6 +91,13 @@ module.exports = function(grunt) {
 				],
 				tasks: ['recess']
 			},
+      stylus: {
+        files: [
+          'assets/stylus/*.styl'
+        ],
+        tasks: ['<%= env.environment.envName %>', 'stylus:compile'],
+        livereload: true
+      },
 
 //			js: {
 //				files: [
@@ -101,13 +108,7 @@ module.exports = function(grunt) {
 
 			html: {
 				files: ['*.yml', '*.html', '_includes/*.html', '_layouts/*.html', 'pages/**/*.html', '*.md', '_posts/*.md', 'pages/*.md'],
-				tasks: ['<%= env.environment.envName %>', 'exec:build', 'copy:env'],
-			},
-
-			sass: {
-				files: ['assets/sass/**'],
-				tasks: ['<%= env.environment.envName %>', 'compass:build'],
-				livereload: true
+				tasks: ['<%= env.environment.envName %>', 'exec:build', 'stylus:compile', 'copy:env']
 			},
 
 			dev: {
@@ -128,22 +129,16 @@ module.exports = function(grunt) {
 		},
 
 
-		// Compass Info: https://github.com/gruntjs/grunt-contrib-compass
-		compass: {
-			options: {
-				sassDir: 'assets/sass',
-				cssDir: '<%= env.environment.outputDir %>/assets/css',
-				javascriptsDir: '<%= env.environment.outputDir %>/js',
-				imagesDir: '<%= env.environment.outputDir %>/assets/css',
-				fontsDir: '<%= env.environment.outputDir %>/assets/css/fonts',
-				relativeAssets: true
-			},
-			build: {},
-			force: {
-				options: {
-					force: true
-				}
-			}
+		stylus: {
+      compile: {
+        options: {
+          compress: false
+        },
+        paths: 'assets/stylus',
+        files: [
+          {expand: true, flatten: true, cwd: 'assets/stylus', src: 'uglow.styl', dest: '<%= env.environment.outputDir %>/assets/css', ext: '.css'}
+        ]
+      }
 		},
 
 		exec: {
@@ -202,7 +197,7 @@ module.exports = function(grunt) {
 		grunt.log.writeln(envName + ' environment <<<--------------------------------------');
 	});
 
-	grunt.registerTask('_build', 'PRIVATE - creates an environment-specific build', ['clean:env', 'exec:build', 'compass:build']);
+	grunt.registerTask('_build', 'PRIVATE - creates an environment-specific build', ['clean:env', 'exec:build', 'stylus:compile']);
 
 	grunt.registerTask('dev', ['env:dev', '_build', 'connect:dev', 'watch']);
 	grunt.registerTask('prod', ['env:prod', '_build', 'connect:prod']);

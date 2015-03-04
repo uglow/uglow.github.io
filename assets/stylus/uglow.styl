@@ -1,0 +1,40 @@
+.sun
+  -webkit-animation: sunglow 20000ms linear infinite;
+  -moz-animation: sunglow 20000ms linear infinite;
+  -o-animation: sunglow 20000ms linear infinite;
+  animation: sunglow 20000ms linear infinite;
+  text-shadow: 0, 0, 9px, 0, yellow
+  display: inline-block !important
+
+@keyframes sunglow
+  0%
+    color: #fa0
+    text-shadow: 0, 0, 9px, 0, #ff0
+    transform: rotate(0deg)
+
+  33%
+    color: #f60
+    text-shadow: 0, 0, 18px, 0, #fa0
+    transform: rotate(120deg)
+  66%
+    color: #ff0
+    text-shadow: 0, 0, 9px, 0, #f60
+    transform: rotate(240deg)
+  100%
+    color: #fa0
+    text-shadow: 0, 0, 9px, 0, #ff0
+    transform: rotate(360deg)
+
+
+/* Extra tags */
+abbr
+  color: #008800
+  cursor: pointer
+  border-bottom: 1px dotted #008800
+
+// Override Gist-file & highlight clashes
+.gist-file .highlight
+  line-height: normal
+  background-color: #035e75
+  margin-bottom: inherit
+  border: 0
