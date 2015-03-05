@@ -35,7 +35,7 @@ Practical workshop
   - ngRepeat uses `transclude: 'element'`, which initially takes the element out of the DOM and replaces it with a comment
   - Adds a 5th argument to postLink: function(scope, elem, attrs, ctrl, transcludeFn)
 
-{% highlight js  %}
+{% highlight js %}
 transclude: 'element',  // This is what we are doing - transcluding THIS ELEMENT (not the contents of this element)
 link: function(scope, elm, attrs, ctrl, transclude){
   var current = elm;
