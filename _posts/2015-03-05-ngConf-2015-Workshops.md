@@ -20,6 +20,7 @@ image:
 ##4. Advanced Directives (3:45 - 5:15pm) - Joe Maddalone
 
 Practical workshop
+
 - Externalising directive controller as a top-level controller will make testing easier
 - Compile happens first, top-to-bottom, parent-to-child first. EXCEPT WHEN YOU USE `ng-transclude`. 
   - When you use `ng-transclude`, you are saying, "Make my contents of my directive a part of my (the directive's) template".
@@ -34,7 +35,7 @@ Practical workshop
   - ngRepeat uses `transclude: 'element'`, which initially takes the element out of the DOM and replaces it with a comment
   - Adds a 5th argument to postLink: function(scope, elem, attrs, ctrl, transcludeFn)
 
-```js
+{% highlight js  %}
 transclude: 'element',  // This is what we are doing - transcluding THIS ELEMENT (not the contents of this element)
 link: function(scope, elm, attrs, ctrl, transclude){
   var current = elm;
@@ -51,7 +52,7 @@ link: function(scope, elm, attrs, ctrl, transclude){
       });
     })
 })
-```
+{% endhighlight %}
 
 - Use bindOnce to reduce number of watchers (see example - didn't cover in workshop)
 
