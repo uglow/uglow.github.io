@@ -23,7 +23,6 @@
     "grunt-gh-pages": "^0.10.0",
     "grunt-recess": "~1.0.1",
     "grunt-svgmin": "~2.0.1",
-    "jit-grunt": "^0.9.1",
-    "matchdep": "~0.3.0"
+    "jit-grunt": "^0.9.1"
   }
 }
