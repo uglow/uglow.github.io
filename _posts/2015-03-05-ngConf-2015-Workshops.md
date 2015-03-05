@@ -23,7 +23,7 @@ Practical workshop
 
 - Externalising directive controller as a top-level controller will make testing easier
 - Compile happens first, top-to-bottom, parent-to-child first. EXCEPT WHEN YOU USE `ng-transclude`. 
-  - When you use `ng-transclude`, you are saying, "Make my contents of my directive a part of my (the directive's) template".
+  - When you use `ng-transclude`, you are saying, "Make the *contents* of my directive a part of my (the directive's) *template*".
   - For the parent directive (which is using `ng-transclude`) to know it's template, the child template has to be compiled first.
   - So in this case, the compilation happens bottom-up: grandchild, child, parent
 - Pre-link & post-link happen sequentially, for all elements that are siblings
