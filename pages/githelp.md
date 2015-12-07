@@ -3,12 +3,15 @@ published: true
 layout: page
 title: "Git Tips"
 description: ""
-modified: 2013-11-02
+modified: 2015-03-14
 tags: [git, tips]
 comments: false
 share: true
 ---
 [http://ndpsoftware.com/git-cheatsheet.html](Git Cheatsheet)
+
+##Permanently Authenticating on OSX
+Use the [osxkeychain credential helper](https://confluence.atlassian.com/display/STASH/Permanently+authenticating+with+Git+repositories)
 
 ##Common commands
 
@@ -17,6 +20,12 @@ share: true
 <dd>{% highlight console %}
 cd projectDir
 git init{% endhighlight %}</dd>
+
+<dt>Create a bare repository (on a USB stick, for transferring between networks)</dt>
+<dd>{% highlight console %}
+cd projectDir
+git init —-bare myrepo.git{% endhighlight %}
+//Then set this repo as the origin of a local repo</dd>
 
 <dt>Checkout a branch</dt>
 <dd>{% highlight console %}
