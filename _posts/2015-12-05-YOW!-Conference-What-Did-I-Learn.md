@@ -2,8 +2,8 @@
 published: true
 layout: post
 title: "YOW! Conference 2015"
-description: "ngConf 2015 - Advanced Angular Workshops"
-modified: 2015-12-05
+description: ""
+modified: 2015-12-08
 tags: [conference, yow, learn, lesson]
 comments: true
 share: true 
