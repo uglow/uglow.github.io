@@ -19,7 +19,7 @@ I know. It's been a while. But I've been happily refactoring code and learning n
 enough to talk about anything in particular. But then my fabulous company [Odecee](http://www.odecee.com.au) gave me
 a ticket to [YOW! Conference Melbourne](http://melbourne.yowconference.com.au/) for being such an excellent guy - how could I refuse?
 
-So this post is more-or-less my notes from the conference. There will be inaccuracies, missing pieces and interpretations. I hope you enjoy. It's in order of best-to-not-as-good, (IMHO).
+So this post is more-or-less my notes from the conference. There will be inaccuracies, missing pieces and interpretations. I hope you enjoy.
 
 ##Main Learnings##
 - The future is functional and concurrent (and event driven)
@@ -36,12 +36,12 @@ So this post is more-or-less my notes from the conference. There will be inaccur
 conventions and personalising our user interfaces (e.g. cars, phones).
 - When companies become more complex, they add rules to prevent past problems from re-occurring. You can often tell what has happened in a company
 by looking at their HR manual, and noticing the things that they focus on.
-- Netflix has tried to create a culture whereby the company gets out of the way of their engineers. They ask employees to figure out how to meet the companies goals.
+- Netflix has tried to create a culture whereby the company gets out of the way of their engineers. They ask employees to figure out how to meet the company's goals.
 If someone does something great, they then ask, "Can you grow bigger wings?" (rather than squashing them)
   - This is what is known as a *Freedom and Responsibility* culture (Reed Hastings)
 - Imposing process drives away talent (and innovation)
 - *Conway's Law: You will design systems which reflect the communication structures in your organisation*. 
-- Netflix had lots of little teams talking to lots of over little teams - microservice patterns naturally emerged.
+- Netflix had lots of little teams talking to lots of other little teams - microservice patterns naturally emerged.
 - Microservices enforce the separation needed in a good architecture.
 - Visualisation of complex systems is need to help us understand those systems better
   - [Spigo](http://github.com/adrianco/spigo)
@@ -72,7 +72,7 @@ worklist {
   - a book club application with voting and comments in about 10 lines
   - a teaching application where students could ask for help on a particular topic, and the teachers with knowledge on that topic would be notified
 - Still a [work in progress](http://alarmingdevelopment.org/)
-- Can we programming so simple that it disappears?
+- Can we make programming so simple that it disappears?
 
  
 ##The Miracle of Generators - Bodil Stokke##
@@ -130,7 +130,7 @@ infinity = function*() {
 x = yield x;
 {% endhighlight %}
 
-- You can use this behaviour with promises.
+- You can use this behaviour with promises
 - Asynchronous code ends up looking like synchronous code
 - Anything with a `then()` method in ES6 can be treated as a promise
 - "Imagine a world without callbacks" -> Haskell -> Monads
@@ -165,7 +165,7 @@ $ deploy <serviceName> <version> <environment>
   - Easy to deploy
   - Abstracted from the tech stack
   - Good for developers and good for operations
-- Options that aren;t the best: Tarball/ZIP, Nuget/Pip/Jar/Gems/Npm, OS-specific (MSI, apt-get)
+- Options that aren't the best: Tarball/ZIP, Nuget/Pip/Jar/Gems/Npm, OS-specific (MSI, apt-get)
 - Best option: **Docker**! But managing Docker images is still a work-in-progress...
 
 ###Platforms - for managing Docker###
@@ -213,7 +213,7 @@ $ deploy <serviceName> <version> <environment>
 
 ##Avoiding Rigor Mortis - Dave Thomas##
 
-- Avoid saying, "I'm a <insert language> programmer", as it is like saying, "I'm a hammer user". You should be aiming to be a
+- Avoid saying, "I'm a \<insert language\> programmer", as it is like saying, "I'm a hammer user". You should be aiming to be a
 programmer, able to program in any language you pickup. Not stuck in a rut.
 - The future is functional and concurrent.
 - The limits of my language are the limits of my world
