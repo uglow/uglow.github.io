@@ -12,14 +12,14 @@ liveReloadTag:
 # Owner/author information
 owner:
   name:           Brett Uglow
-  avatar:         avatar-body.png
+  avatar:         me/avatar_head_detroit.png
   bio:            "Born and raised in Melbourne, I like to create great user experiences. I don't have much time to blog, so this site is mainly for my own use to point to interesting posts and share things I think are worth sharing."
   email:          uifx@uifx.com
   # Social networking links used in footer. Update and remove as you like.
-  twitter:
+  twitter:        u_glow
   facebook:
   github:         uglow
-  stackexchange:
+  stackexchange:  uglow
   linkedin:       http://www.linkedin.com/profile/view?id=9288137
   instagram:
   flickr:
