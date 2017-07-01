@@ -1,74 +1,74 @@
-# COMMON CONFIG with PRODUCTION DEFAULTS
-title:            ugl<span class='sun'>&#9728;</span>w
-textTitle:        ugl&#9728;w
-description:      Memorable moments in the life of a creator
-disqus_shortname: uglowsblog
-#Comment out url when working locally to resolve base urls correctly
-url:              http://uglow.github.io
-#Where the "Home" on the nav menu takes you
-home:             http://uglow.github.io
-liveReloadTag:
+# Hexo Configuration
+## Docs: https://hexo.io/docs/configuration.html
+## Source: https://github.com/hexojs/hexo/
 
-# Owner/author information
-owner:
-  name:           Brett Uglow
-  avatar:         me/avatar_head_detroit.png
-  bio:            "Born and raised in Melbourne, I like to create great user experiences. I don't have much time to blog, so this site is mainly for my own use to point to interesting posts and share things I think are worth sharing."
-  email:          uifx@uifx.com
-  # Social networking links used in footer. Update and remove as you like.
-  twitter:        u_glow
-  facebook:
-  github:         uglow
-  stackexchange:  uglow
-  linkedin:       http://www.linkedin.com/profile/view?id=9288137
-  instagram:
-  flickr:
-  tumblr:
-  # For Google Authorship https://plus.google.com/authorship
-  google_plus:
+# Site
+title: Brett Uglow's Blog
+textTitle: Brett Ugl&#9728;w's Blog
+subtitle:
+description:
+author: Brett Uglow
+language: en
+timezone: Australia/Melbourne
 
-# Analytics and webmaster tools stuff goes here
-google_analytics: UA-53871788-1
-google_verify:
-# https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
-bing_verify:
+# URL
+## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
+url: ''
+root: /
+permalink: :year/:month/:day/:title/
+permalink_defaults:
 
-# Links to include in top navigation
-# For external links add external: true
-links:
-  - title: Git tips
-    url: /pages/githelp.html
-  - title: RegEx tips
-    url: /pages/regexhelp.html
-  - title: UIFX
-    url: http://www.uifx.com
-    external: true
+# Directory
+source_dir: source
+public_dir: public
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+code_dir: downloads/code
+i18n_dir: :lang
+skip_render:
 
-# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-timezone:    Australia/Melbourne
-future:      true
-highlighter: pygments
-markdown:    kramdown
+# Writing
+new_post_name: :year-:month-:day-:title.md
+default_layout: post
+titlecase: false # Transform title into titlecase
+external_link: true # Open external links in new tab
+filename_case: 0
+render_drafts: false
+post_asset_folder: true
+relative_link: false
+future: true
+highlight:
+  enable: true
+  line_number: true
+  auto_detect: false
+  tab_replace:
 
-# https://github.com/mojombo/jekyll/wiki/Permalinks
-permalink:   /:categories/:title
+# Category & Tag
+default_category: uncategorized
+category_map:
+tag_map:
 
-# Amount of post to show on home page
-paginate: 2
+# Date / Time format
+## Hexo uses Moment.js to parse and display date
+## You can customize the date format as defined in
+## http://momentjs.com/docs/#/displaying/format/
+date_format: YYYY-MM-DD
+time_format: HH:mm:ss
 
-kramdown:
-  auto_ids: true
-  footnote_nr: 1
-  entity_output: as_char
-  toc_levels: 1..6
-  use_coderay: true
+# Pagination
+## Set per_page to 0 to disable pagination
+per_page: 2
+pagination_dir: page
 
-  coderay:
-    coderay_line_numbers: nil
-    coderay_line_numbers_start: 1
-    coderay_tab_width: 4
-    coderay_bold_every: 10
-    coderay_css: class
+# Extensions
+## Plugins: https://hexo.io/plugins/
+## Themes: https://hexo.io/themes/
+theme: tranquilpeak
 
-include: [".htaccess"]
-exclude: ["lib", "config.rb", "*.sh", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "dev", "dist", "sass", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules"]
+# Deployment
+## Docs: https://hexo.io/docs/deployment.html
+deploy:
+  type: git
+  repo: git@github.com/uglow/uglow.github.io.git
+  branch: [branch]

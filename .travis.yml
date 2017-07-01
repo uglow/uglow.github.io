@@ -1,0 +1,40 @@
+sudo: false
+language: node_js
+node_js:
+  - "8"
+
+# Need to specify a GCC compiler now!
+# https://docs.travis-ci.com/user/languages/javascript-with-nodejs#Node.js-v4-(or-io.js-v3)-compiler-requirements
+env:
+  - CXX=g++-4.8
+
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - g++-4.8
+
+before_install:
+  - npm prune
+  - npm set progress=false
+
+install:
+  - npm install --quiet
+
+before_script:
+
+script:
+  - if [ "$TRAVIS_BRANCH" = "master" ]; then 'npm run deploy' fi
+
+after_success:
+
+branches:
+  except:
+    - /^v\d+\.\d+\.\d+$/
+
+notifications:
+  email:
+    recipients:
+      - u_glow@hotmail.com
+
