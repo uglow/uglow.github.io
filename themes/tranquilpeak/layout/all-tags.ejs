@@ -1,3 +1,18 @@
+<%
+
+// Create a field on the tag so that we can do case-insensitive sorting
+function addLowerName(item) {
+  item.lowerName = item.name.toLowerCase();
+  return item;
+}
+
+function byLowerName(a, b) {
+  if (a.lowerName > b.lowerName) return 1;
+  if (b.lowerName > a.lowerName) return -1;
+  return 0
+}
+
+%>
 <div id="tags-archives" class="main-content-wrap">
     <form id="filter-form" action="#">
         <input name="tag" type="text" class="form-control input--xlarge" placeholder="<%= __('global.search_tag') %>" autofocus="autofocus">
@@ -8,15 +23,15 @@
         data-message-other="<%= __('global.tags_found.other') %>"></h4>
 
         <section>
-        <% site.tags.sort('name').each(function(tag) { %>
-            <a class="tag tag--primary tag--small" href="<%= '#' + tag.name + '-list' %>" data-tag="<%= tag.name.toLowerCase() %>">
+        <% site.tags.toArray().map(addLowerName).sort(byLowerName).forEach(function(tag) { %>
+            <a class="tag tag--primary tag--small" href="<%= '#' + tag.name + '-list' %>" data-tag="<%= tag.lowerName %>">
                 <%= tag.name %>
             </a>
         <% }); %>
     </section>
     <section class="boxes">
-        <% site.tags.sort('name').each(function(tag) { %>
-            <div id="<%= tag.name + '-list' %>" class="archive box" data-tag="<%= tag.name.toLowerCase() %>">
+        <% site.tags.toArray().map(addLowerName).sort(byLowerName).forEach(function(tag) { %>
+            <div id="<%= tag.name + '-list' %>" class="archive box" data-tag="<%= tag.lowerName %>">
                 <h4 class="archive-title">
                     <a class="link-unstyled" href="<%- url_for(config.tag_dir + '/' + tag.slug) %>">
                         <%= tag.name + ' (' + tag.length + ')' %>
