@@ -5,7 +5,8 @@
     <% if (theme.disqus_shortname) { %>
         <script>
              var disqus_config = function () {
-                 this.page.url = '<%= post.permalink %>';
+                 // page.url needs to be fully qualified
+                 this.page.url = location.protocol + location.host + location.port + '<%= post.permalink %>';
                  <% if (post.disqusIdentifier) { %>
                     this.page.identifier = '<%= post.disqusIdentifier %>';
                  <% } else { %>
