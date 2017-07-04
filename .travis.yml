@@ -20,7 +20,7 @@ before_install:
   - npm set progress=false
 
 install:
-  - npm install --quiet
+  - npm install
 
 before_script:
 
