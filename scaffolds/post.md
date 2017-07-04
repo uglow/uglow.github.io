@@ -2,5 +2,7 @@
 title: {{ title }}
 date: {{ date }}
 tags: []
-coverImage: ''
+coverImage: 
+coverCaption: 
+readingtime: 
 ---

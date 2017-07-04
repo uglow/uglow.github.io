@@ -3,7 +3,7 @@
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 <% if (post.prev) { %>
-                    <a class="post-action-btn btn btn--default tooltip--top" href="<%- url_for(post.prev.path) %>"  data-tooltip="<%= post.prev.title || '(' + __('post.no_title') + ')' %>">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="<%- url_for(post.prev.path) %>"  data-tooltip="<%- post.prev.textTitle || post.prev.title || '(' + __('post.no_title') + ')' %>">
                 <% } else { %>
                     <a class="post-action-btn btn btn--disabled">
                 <% } %>
@@ -13,7 +13,7 @@
             </li>
             <li class="post-action">
                 <% if (post.next) { %>
-                    <a class="post-action-btn btn btn--default tooltip--top" href="<%- url_for(post.next.path) %>" data-tooltip="<%= post.next.title || '(' + __('post.no_title') + ')' %>">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="<%- url_for(post.next.path) %>" data-tooltip="<%- post.next.textTitle || post.next.title || '(' + __('post.no_title') + ')' %>">
                 <% } else { %>
                     <a class="post-action-btn btn btn--disabled">
                 <% } %>

@@ -1,0 +1,8 @@
+{
+  "name": "hexo-generator-icon-manifest",
+  "version": "1.0.0",
+  "description": "Generates a manifest.json file for icons",
+  "main": "index.js",
+  "author": "Brett Uglow <u_glow@hotmail.com> (http://uglow.github.io/)",
+  "license": "ISC"
+}

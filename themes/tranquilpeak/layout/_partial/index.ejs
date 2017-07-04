@@ -8,13 +8,15 @@
         var thumbnailImagePosition = theme.thumbnail_image_position;
         /* Define thumbnail image */
 
-        // Define position of the thumbnail image
-        if (!post.excerpt && !post.link) {
-            thumbnailImagePosition = "bottom";
-        } else if (thumbnailImageUrl !== null) {
-            if (post.thumbnailImagePosition && post.thumbnailImagePosition.length)  {
-                thumbnailImagePosition = post.thumbnailImagePosition;
-            }
+        // Override the position of the thumbnail image
+        // BU: I disagree with this default, so I've removed it
+        //        if (!post.excerpt && !post.link) {
+        //            thumbnailImagePosition = "bottom";
+        //        } else
+        if (thumbnailImageUrl !== null) {
+          if (post.thumbnailImagePosition && post.thumbnailImagePosition.length)  {
+              thumbnailImagePosition = post.thumbnailImagePosition;
+          }
         }
 
         // Generate and insert table of contents in post content

@@ -22,7 +22,7 @@
 %>
 <article class="post" itemscope itemType="http://schema.org/BlogPosting">
     <% if (post.coverCaption) { %>
-        <span class="post-header-cover-caption caption"><%= post.coverCaption %></span>
+        <span class="post-header-cover-caption caption"><%- markdown(post.coverCaption) %></span>
     <% } %>
     <% if (!post.coverImage || post.coverMeta === 'out') { %>
         <%- partial('post/header')%>

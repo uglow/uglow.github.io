@@ -25,13 +25,10 @@ install:
 before_script:
 
 script:
-  - if [ "$TRAVIS_BRANCH" = "master" ]; then 'npm run deploy' fi
+  - if [ "$TRAVIS_BRANCH" = "source" ]; then 'npm run deploy' fi
 
 after_success:
 
-branches:
-  except:
-    - /^v\d+\.\d+\.\d+$/
 
 notifications:
   email:

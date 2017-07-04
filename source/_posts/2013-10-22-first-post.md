@@ -1,11 +1,10 @@
 ---
-layout: post
-title: "Ugl<span class='sun'>&#9728;</span>w on GitHub"
+title: Ugl<span class='sun'>&#9728;</span>w on GitHub
 textTitle: Ugl&#9728;w on GitHub
-modified: 2013-11-02
+date: 2013-10-02
 tags: [jekyll, newbie]
-comments: true
 coverImage: abstract-3.jpg
+coverCaption: '[dargadgetz](http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/)'
 ---
 
 A blog site that's not a pain-in-the-bottom to setup and configure!
