@@ -15,9 +15,9 @@ addons:
     packages:
       - g++-4.8
 
-before_install:
-  - npm prune
-  - npm set progress=false
+#before_install:
+#  - npm prune
+#  - npm set progress=false
 
 install:
   - npm install
