@@ -1,0 +1,112 @@
+.sun {
+  -webkit-animation: sunglow 20000ms linear infinite;
+  -moz-animation: sunglow 20000ms linear infinite;
+  -o-animation: sunglow 20000ms linear infinite;
+  animation: sunglow 20000ms linear infinite;
+  text-shadow: 0, 0, 9px, 0, #ff0;
+  display: inline-block !important;
+}
+/* Extra tags */
+abbr {
+  color: #080;
+  cursor: pointer;
+  border-bottom: 1px dotted #080;
+}
+.gist-file .highlight {
+  line-height: normal;
+  background-color: #035e75;
+  margin-bottom: inherit;
+  border: 0;
+}
+@-moz-keyframes sunglow {
+  0% {
+    color: #fa0;
+    text-shadow: 0, 0, 9px, 0, #ff0;
+    transform: rotate(0deg);
+  }
+  33% {
+    color: #f60;
+    text-shadow: 0, 0, 18px, 0, #fa0;
+    transform: rotate(120deg);
+  }
+  66% {
+    color: #ff0;
+    text-shadow: 0, 0, 9px, 0, #f60;
+    transform: rotate(240deg);
+  }
+  100% {
+    color: #fa0;
+    text-shadow: 0, 0, 9px, 0, #ff0;
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes sunglow {
+  0% {
+    color: #fa0;
+    text-shadow: 0, 0, 9px, 0, #ff0;
+    transform: rotate(0deg);
+  }
+  33% {
+    color: #f60;
+    text-shadow: 0, 0, 18px, 0, #fa0;
+    transform: rotate(120deg);
+  }
+  66% {
+    color: #ff0;
+    text-shadow: 0, 0, 9px, 0, #f60;
+    transform: rotate(240deg);
+  }
+  100% {
+    color: #fa0;
+    text-shadow: 0, 0, 9px, 0, #ff0;
+    transform: rotate(360deg);
+  }
+}
+@-o-keyframes sunglow {
+  0% {
+    color: #fa0;
+    text-shadow: 0, 0, 9px, 0, #ff0;
+    transform: rotate(0deg);
+  }
+  33% {
+    color: #f60;
+    text-shadow: 0, 0, 18px, 0, #fa0;
+    transform: rotate(120deg);
+  }
+  66% {
+    color: #ff0;
+    text-shadow: 0, 0, 9px, 0, #f60;
+    transform: rotate(240deg);
+  }
+  100% {
+    color: #fa0;
+    text-shadow: 0, 0, 9px, 0, #ff0;
+    transform: rotate(360deg);
+  }
+}
+@keyframes sunglow {
+  0% {
+    color: #fa0;
+    text-shadow: 0, 0, 9px, 0, #ff0;
+    transform: rotate(0deg);
+  }
+  33% {
+    color: #f60;
+    text-shadow: 0, 0, 18px, 0, #fa0;
+    transform: rotate(120deg);
+  }
+  66% {
+    color: #ff0;
+    text-shadow: 0, 0, 9px, 0, #f60;
+    transform: rotate(240deg);
+  }
+  100% {
+    color: #fa0;
+    text-shadow: 0, 0, 9px, 0, #ff0;
+    transform: rotate(360deg);
+  }
+}
+
+.sidebar-profile code {
+  background-color: rgba(0,0,0,0.25);
+}
