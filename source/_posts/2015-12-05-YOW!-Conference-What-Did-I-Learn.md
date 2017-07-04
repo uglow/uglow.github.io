@@ -16,7 +16,7 @@ a ticket to [YOW! Conference Melbourne](http://melbourne.yowconference.com.au/) 
 
 So this post is more-or-less my notes from the conference. There will be inaccuracies, missing pieces and interpretations. I hope you enjoy.
 
-##Main Learnings##
+## Main Learnings
 - The future is functional and concurrent (and event driven)
 - [Docker](#deploying-and-scaling-microservices---sam-newman-thoughtworks) might be the best kind of software artifact that everyone can use and understand
 - [Conway's Law](https://www.thoughtworks.com/insights/blog/demystifying-conways-law)
@@ -25,7 +25,7 @@ So this post is more-or-less my notes from the conference. There will be inaccur
 - [The limits of my language are the limits of my world](#avoiding-rigor-mortis---dave-thomas)
 
 
-##Keynote Thursday 9am - Adrian Cockcroft - "It's complicated..."##
+## Keynote Thursday 9am - Adrian Cockcroft - "It's complicated..."
 
 - In modern systems there can be so many moving parts that we cannot intuit what a system will do *next*. But we deal with this complexity by using patterns,
 conventions and personalising our user interfaces (e.g. cars, phones).
@@ -43,7 +43,7 @@ If someone does something great, they then ask, "Can you grow bigger wings?" (ra
   - OpenZipkin
 
 
-##Transcript: End user programming of mobile social apps - Jonathan Edwards##
+## Transcript: End user programming of mobile social apps - Jonathan Edwards
 
 - Spoke about the gap between anyone being able to program a spreadsheet, and only specialists able to create applications.
 - Hypercard bridged this gap, when it was around.
@@ -70,11 +70,11 @@ worklist {
 - Can we make programming so simple that it disappears?
 
  
-##The Miracle of Generators - Bodil Stokke##
+## The Miracle of Generators - Bodil Stokke
 
 *This was a great talk!*
 
-###Iterators###
+### Iterators
 - Getting an iterator from an array:
 {% codeblock lang:js  %}
 let arr = [1, 2, 3];
@@ -104,7 +104,7 @@ for (let i of arr) console.log(i);  // Displays "1\n2\n3\n"
 - Unlike arrays, iterable objects can return an *infinite set* of values
 
 
-###Generators###
+### Generators
 
 - Remove the boilerplate code from iterators
 - In the following snippet, the value of `n` is returned when the `yield` statement is encountered. So the yielded values when 
@@ -134,10 +134,10 @@ x = yield x;
 - [Slides - including live code editor!](http://bodil.lol/generators/)
 
 
-##Deploying and Scaling Microservices - Sam Newman (ThoughtWorks)##
+## Deploying and Scaling Microservices - Sam Newman (ThoughtWorks)
 - Managing lots of little things can be complex
 
-###Core Principles when designing CI/CD###
+### Core Principles when designing CI/CD
 - Independent deploy-ability: being able to deploy a single service at a time.
   - If you get this wrong, you have failed!
   - If you need to deploy services in a certain order, you have FAILED!
@@ -150,11 +150,11 @@ x = yield x;
 $ deploy <serviceName> <version> <environment>
 {% endcodeblock %}
   - where,
-    - \<serviceName\> is the name of the service
-    - \<version\> is a version number, or a shortcut like "latest" or "local"
-    - \<environment\> refers to configuration for a topology
+    - `<serviceName>` is the name of the service
+    - `<version>` is a version number, or a shortcut like "latest" or "local"
+    - `<environment>` refers to configuration for a topology
 
-###Artifacts###
+### Artifacts
 - We want an *ideal artifact* to be:
   - Easy to create
   - Easy to deploy
@@ -163,7 +163,7 @@ $ deploy <serviceName> <version> <environment>
 - Options that aren't the best: Tarball/ZIP, Nuget/Pip/Jar/Gems/Npm, OS-specific (MSI, apt-get)
 - Best option: **Docker**! But managing Docker images is still a work-in-progress...
 
-###Platforms - for managing Docker###
+### Platforms - for managing Docker
 - We want:
   - Separate artifact from topology
   - Abstract the work for handling images
@@ -173,7 +173,7 @@ $ deploy <serviceName> <version> <environment>
 - Options: Docker Swarm (least best), Kubernetes (next best), Mesos (best at the moment, but can be complex)
   
 
-## Mobile Performance @ Facebook - Mike Magruder##
+## Mobile Performance @ Facebook - Mike Magruder
 
 - Facebook found: If part of an application becomes more performant, people use it more.
 - Performance:
@@ -184,7 +184,7 @@ $ deploy <serviceName> <version> <environment>
 - Recommended website on methodical thinking [www.brendangregg.com](www.brendangregg.com)
 
 
-##Autonomy and Asynchrony: the Key to Designing Reliable Systems - Indu Alagarsamy##
+## Autonomy and Asynchrony: the Key to Designing Reliable Systems - Indu Alagarsamy
 
 - Event-driven architecture is what this was about
 - How can we write software which just does stuff, on it's own? E.g. Mars orbiter was out-of-contact with the Earth for 2 days, but it was able to make decisions to keep itself "alive".
@@ -196,7 +196,7 @@ $ deploy <serviceName> <version> <environment>
 
 
 
-##Alternatives to MVC: React Native, ReactiveCocoa - two guys##
+## Alternatives to MVC: React Native, ReactiveCocoa - two guys
 
 - Goal is to manage state *better*
 - ReactiveCocoa is a Functional Reactive Programming (FRP) library for Swift (iOS)
@@ -206,9 +206,9 @@ $ deploy <serviceName> <version> <environment>
   - Action, Model and View are *all* signals. Action => Model => View, => Action ...
   
 
-##Avoiding Rigor Mortis - Dave Thomas##
+## Avoiding Rigor Mortis - Dave Thomas
 
-- Avoid saying, "I'm a \<insert language\> programmer", as it is like saying, "I'm a hammer user". You should be aiming to be a
+- Avoid saying, "I'm a `<insert language>` programmer", as it is like saying, "I'm a hammer user". You should be aiming to be a
 programmer, able to program in any language you pickup. Not stuck in a rut.
 - The future is functional and concurrent.
 - The limits of my language are the limits of my world
@@ -221,7 +221,7 @@ programmer, able to program in any language you pickup. Not stuck in a rut.
 - Each *match* specifies a *state transformation*  (sounds like a pure function, Redux)
   
 
-##The Mother of all Programming Language Demos - Sean McDirmid##
+## The Mother of all Programming Language Demos - Sean McDirmid
 
 - Sean is from Microsoft Research in China
 - Q. How do we make programming better? A. **Give better feedback loops!  (so true)**
@@ -233,17 +233,17 @@ programmer, able to program in any language you pickup. Not stuck in a rut.
 - The idea that you could start with a concrete example and the system would create abstract code, which would then allow you to create other concrete examples.
 
 
-##The Future of Software Engineering - Glenn Vandenburg##
+## The Future of Software Engineering - Glenn Vandenburg
 
 - Talked a lot about the history of SE (1967 NATO conference)
 - SE initially based on civil engineering - the engineering discipline that it is LEAST like!
 - Engineering is about design, trial and error, applying process.
 - Requirements are often *discovered* by engineers, not all known up-front.
-- We need to be able to design structures that are highly changeable, *unlike most other engineering disciplines**
+- We need to be able to design structures that are highly changeable, **unlike most other engineering disciplines**
 - The future: focus on teaching programmers how good programmers think.
 
 
-##Wrangling the internet of things with Haskell - Reid Draper##
+## Wrangling the internet of things with Haskell - Reid Draper
 
 - I didn't get much out of this session. It was about some things and platforms and events...
 
