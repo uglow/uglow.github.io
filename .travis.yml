@@ -15,12 +15,12 @@ addons:
     packages:
       - g++-4.8
 
-#before_install:
-#  - npm prune
-#  - npm set progress=false
-
 install:
   - npm install
+  - cd themes/tranquilpeak
+  - npm install
+  - cd ../../
+  - pwd
 
 before_script:
 
