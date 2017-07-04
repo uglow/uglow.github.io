@@ -25,7 +25,7 @@ install:
 before_script:
 
 script:
-  - if [ "$TRAVIS_BRANCH" = "source" ]; then 'npm run deploy' fi
+  - npm run deploy
 
 after_success:
 
