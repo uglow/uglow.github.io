@@ -42,3 +42,7 @@ notifications:
     recipients:
       - u_glow@hotmail.com
 
+# Only run the build for the source branch
+branches:
+  only:
+    - source
