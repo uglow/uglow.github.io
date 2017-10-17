@@ -33,8 +33,9 @@ Last commit message | {% codeblock lang:bash line_number:false %}
                       git log -1 		# view last commit
                       git log -5		# view last 5 commits
                       git log -1 --pretty=%B  # Prints just the commit message{% endcodeblock %}
-Find commits containing foo | {% codeblock lang:bash line_number:false %}git log -S foo --source --all
-                           {% endcodeblock %}
+Find commits containing 'foo bar' | {% codeblock lang:bash line_number:false %}git log -S 'foo bar' --source --all
+                                    # From https://stackoverflow.com/questions/5816134/finding-a-git-commit-that-introduced-a-string-in-any-branch
+                                    {% endcodeblock %}
 
 ## Emergency commands
 
