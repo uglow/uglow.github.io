@@ -34,7 +34,7 @@ COMMAND | DESCRIPTION
 `last` | Shows last logged in users.
 `mount` | Show mounted drives.
 `df -h` | Shows disk usage in human readable output.
-`echo "user:passwd" \| chpasswd` | Reset password in one line.
+<code>echo "user:passwd" &#124; chpasswd</code> | Reset password in one line.
 `getent passwd` | List users on Linux.
 `strings /usr/local/bin/blah` | Shows contents of none text files, e.g. whats in a binary.
 `uname -ar` | Shows running kernel version.
@@ -66,8 +66,8 @@ COMMAND | DESCRIPTION
 `yum info httpd` | Shows package info, architecture, version etc.
 `yum localinstall blah.rpm` | Use YUM to install local RPM, settles deps from repo.
 `yum deplist package` | Shows deps for a package.
-`yum list installed \| more` | List all installed packages.
-`yum grouplist \| more` | Show all YUM groups.
+<code>yum list installed &#124; more</code> | List all installed packages.
+<code>yum grouplist &#124; more</code> | Show all YUM groups.
 `yum groupinstall 'Development Tools'` | Install YUM group.
 
 ## Debian / Ubuntu / .deb Based Distros
