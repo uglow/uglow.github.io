@@ -99,7 +99,7 @@ COMMAND | DESCRIPTION
 `tar xf archive.tar` | Extract tar file Linux.
 `tar xvzf archive.tar.gz` | Extract a tar.gz file Linux.
 `tar xjf archive.tar.bz2` | Extract a tar.bz2 file Linux.
-`tar ztvf file.tar.gz | grep blah` | Search inside a tar.gz file.
+<code>tar ztvf file.tar.gz &#124; grep blah</code> | Search inside a tar.gz file.
 `gzip -d archive.gz` | Extract a gzip file Linux.
 `zcat archive.gz` | Read a gz file Linux without decompressing.
 `zless archive.gz` | Same function as the less command for .gz archives.
