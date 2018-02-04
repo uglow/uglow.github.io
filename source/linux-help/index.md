@@ -1,3 +1,8 @@
+---
+title: Linux Tips
+date: 2018-02-05 09:00:00
+---
+
 From [https://techincidents.com/important-penetration-testing-cheat-sheet/]
 
 ## Detection
