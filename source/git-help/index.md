@@ -3,7 +3,7 @@ title: Git Tips
 date: 2015-03-14 22:26:35
 ---
 
-[http://ndpsoftware.com/git-cheatsheet.html](Git Cheatsheet)
+[Git Cheatsheet](http://ndpsoftware.com/git-cheatsheet.html)
 
 <!-- toc -->
 
