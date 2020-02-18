@@ -13,7 +13,52 @@ Purpose | Command
 :------ | :------
 Default Font | `skinparam defaultFontName "Comic Sans MS"`
 Default Font Size | `skinparam defaultFontSize 18`
-Default Text Alignment | `skinparam defaultTextAlignment center,left,right`
+[Default Text Alignment](https://plantuml.com/skinparam) | `skinparam defaultTextAlignment center,left,right`
+[Links](https://plantuml.com/link) | {% codeblock lang:bash line_number:false %}    participant Bob [[http://www.yahoo.com]]
+    Bob -> Alice : [[http://www.google.com]] hello
+
+    class Dummy [[http://www.yahoo.com]]
+    Object <|-- Foo
+    class Foo {
+      [[http://www.google.com]]
+      + methods1() [[http://www.yahoo.com/A1{Some explainations about this method}]]
+      + methods2() [[http://www.yahoo.com/A2]]
+    }
+     
+    class Foo2 {
+      + methods1() [[http://www.yahoo.com/B1]]
+      + methods2() [[http://www.yahoo.com/B2]]
+    }
+     
+    class Object {
+      [[http://www.yahoo.com]]
+    }
+    
+    :Foo:
+    note left of Foo {
+    [[http://www.google.com]]
+    This is a note
+    }
+    
+    note right of Foo {
+    Yet another link to [[http://www.google.com]] as demo.
+    You can also <u>[[http://www.yahoo.fr specify a text]]</u> for the link.
+    And even <u>[[http://www.yahoo.fr{This is a tooltip} add a tooltip]]</u> to the link.
+    }
+
+    Dummy -> Alice : foo1
+    ref over Alice, Dummy : [[http://www.google.com]] Foo2
+    
+    Alice -> Bob : hello
+    
+    ref over Alice, Bob
+      [[http://www.google.com]]
+      this is a
+      reference over
+      Alice and Bob
+    end
+    {% endcodeblock %}
+Link Colour | `skinparam HyperLinkColor red`
 Title | {% codeblock lang:bash line_number:false %}
     skinparam titleBorderRoundCorner 15
     skinparam titleBorderThickness 2
@@ -155,3 +200,13 @@ Hiding elements | {% codeblock lang:bash line_number:false %}
     endlegend
     !endsub
     {% endcodeblock %}
+
+## Exporting
+
+To export a diagram that has hyperlinks, it needs to be saved as an **SVG** and included using this syntax:
+```
+<!-- Need to use Object tags to get the links in an SVG to be clickable -->
+<object data="se-front-end.svg" type="image/svg+xml" width="100%">
+    <img src="se-front-end.svg"/>
+</object>
+```
