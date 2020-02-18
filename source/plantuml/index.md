@@ -90,7 +90,6 @@ Header | {% codeblock lang:bash line_number:false %}
     Do not use in production.
     endheader
     {% endcodeblock %}
-Top to bottom | 
 Spacing between nodes | {% codeblock lang:bash line_number:false %}
                         skinparam padding 0
                         skinparam nodesep 30
@@ -148,7 +147,10 @@ Define & use an image with scaling | {% codeblock lang:bash line_number:false %}
 
 Purpose | Command
 :------ | :------
-Comments | `class Foo { /' override default '/`
+Comments | {% codeblock lang:bash line_number:false %}
+    ' Start of line comment
+    class Foo { /' end of line comment '/
+    {% endcodeblock %}
 Functions | {% codeblock lang:bash line_number:false %}
     !unquoted function $row($name, $type)
     $cell($name, $type) |
