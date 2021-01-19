@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Brett Uglow&#39;s Blog</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="/"/>
+  <updated>2021-01-19T02:00:34.777Z</updated>
+  <id>/</id>
+  
+  <author>
+    <name>Brett Uglow</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Building Commercial CMS-backed websites</title>
+    <link href="/2021/01/17/building-commmercial-cms-backed-websites/"/>
+    <id>/2021/01/17/building-commmercial-cms-backed-websites/</id>
+    <published>2021-01-17T13:00:00.000Z</published>
+    <updated>2021-01-19T02:00:34.777Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+      <category term="software development" scheme="/tags/software-development/"/>
+    
+      <category term="DigIO" scheme="/tags/DigIO/"/>
+    
+      <category term="SSR" scheme="/tags/SSR/"/>
+    
+      <category term="SSG" scheme="/tags/SSG/"/>
+    
+      <category term="website" scheme="/tags/website/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Enforcing the Arrow of Dependency</title>
+    <link href="/2020/06/18/enforcing-the-arrow-of-dependency/"/>
+    <id>/2020/06/18/enforcing-the-arrow-of-dependency/</id>
+    <published>2020-06-18T14:00:00.000Z</published>
+    <updated>2021-01-19T02:00:34.777Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+      <category term="software development" scheme="/tags/software-development/"/>
+    
+      <category term="DigIO" scheme="/tags/DigIO/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Maintainable source code repositories</title>
+    <link href="/2019/11/18/maintainable-source-code-repositories/"/>
+    <id>/2019/11/18/maintainable-source-code-repositories/</id>
+    <published>2019-11-18T13:00:00.000Z</published>
+    <updated>2021-01-19T02:00:34.777Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+      <category term="software development" scheme="/tags/software-development/"/>
+    
+      <category term="DigIO" scheme="/tags/DigIO/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>User Interface Development in the Next 5–10 years</title>
+    <link href="/2019/03/24/automatic-time-tracking-for-the-lazy/"/>
+    <id>/2019/03/24/automatic-time-tracking-for-the-lazy/</id>
+    <published>2019-03-24T13:00:00.000Z</published>
+    <updated>2021-01-19T02:00:34.777Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+      <category term="npm" scheme="/tags/npm/"/>
+    
+      <category term="software development" scheme="/tags/software-development/"/>
+    
+      <category term="time tracking" scheme="/tags/time-tracking/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>YOW! CTO Conference 2018 — the abridged version</title>
+    <link href="/2018/09/02/yow-cto-conf-abridged-version/"/>
+    <id>/2018/09/02/yow-cto-conf-abridged-version/</id>
+    <published>2018-09-02T14:00:00.000Z</published>
+    <updated>2021-01-19T02:00:34.777Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+      <category term="software development" scheme="/tags/software-development/"/>
+    
+      <category term="DigIO" scheme="/tags/DigIO/"/>
+    
+      <category term="organisations" scheme="/tags/organisations/"/>
+    
+      <category term="software" scheme="/tags/software/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>User Interface Development in the Next 5–10 years</title>
+    <link href="/2018/09/02/user-interface-development-in-the-next-5%E2%80%9310-years/"/>
+    <id>/2018/09/02/user-interface-development-in-the-next-5–10-years/</id>
+    <published>2018-09-02T14:00:00.000Z</published>
+    <updated>2021-01-19T02:00:34.777Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+      <category term="software development" scheme="/tags/software-development/"/>
+    
+      <category term="DigIO" scheme="/tags/DigIO/"/>
+    
+      <category term="GUI" scheme="/tags/GUI/"/>
+    
+      <category term="organisations" scheme="/tags/organisations/"/>
+    
+      <category term="software" scheme="/tags/software/"/>
+    
+      <category term="planning" scheme="/tags/planning/"/>
+    
+      <category term="future" scheme="/tags/future/"/>
+    
+      <category term="VR" scheme="/tags/VR/"/>
+    
+      <category term="AR" scheme="/tags/AR/"/>
+    
+      <category term="AI" scheme="/tags/AI/"/>
+    
+      <category term="ML" scheme="/tags/ML/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>How To Minimise The Cost Of GUI Development</title>
+    <link href="/2018/04/10/how-to-minise-the-cost-of-GUI-development/"/>
+    <id>/2018/04/10/how-to-minise-the-cost-of-GUI-development/</id>
+    <published>2018-04-10T14:00:00.000Z</published>
+    <updated>2021-01-19T02:00:34.777Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+      <category term="software development" scheme="/tags/software-development/"/>
+    
+      <category term="DigIO" scheme="/tags/DigIO/"/>
+    
+      <category term="GUI" scheme="/tags/GUI/"/>
+    
+      <category term="organisations" scheme="/tags/organisations/"/>
+    
+      <category term="software" scheme="/tags/software/"/>
+    
+      <category term="planning" scheme="/tags/planning/"/>
+    
+      <category term="strategy" scheme="/tags/strategy/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Why we build GUIs again and again (and will continue to do so for the foreseeable future)</title>
+    <link href="/2018/02/08/why-we-build-guis-again-and-again/"/>
+    <id>/2018/02/08/why-we-build-guis-again-and-again/</id>
+    <published>2018-02-08T13:00:00.000Z</published>
+    <updated>2021-01-19T02:00:34.777Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+      <category term="mobile" scheme="/tags/mobile/"/>
+    
+      <category term="software development" scheme="/tags/software-development/"/>
+    
+      <category term="DigIO" scheme="/tags/DigIO/"/>
+    
+      <category term="GUI" scheme="/tags/GUI/"/>
+    
+      <category term="organisations" scheme="/tags/organisations/"/>
+    
+      <category term="history" scheme="/tags/history/"/>
+    
+      <category term="fashion" scheme="/tags/fashion/"/>
+    
+      <category term="software" scheme="/tags/software/"/>
+    
+      <category term="hardware" scheme="/tags/hardware/"/>
+    
+      <category term="React" scheme="/tags/React/"/>
+    
+      <category term="Angular" scheme="/tags/Angular/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>QCon 2017 - Data, Visualisation and Machine Learning</title>
+    <link href="/2017/12/10/qcon-2017-data-vis-and-ml/"/>
+    <id>/2017/12/10/qcon-2017-data-vis-and-ml/</id>
+    <published>2017-12-10T13:00:00.000Z</published>
+    <updated>2021-01-19T02:00:34.777Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+      <category term="machine learning" scheme="/tags/machine-learning/"/>
+    
+      <category term="software development" scheme="/tags/software-development/"/>
+    
+      <category term="qcon" scheme="/tags/qcon/"/>
+    
+      <category term="data visualisation" scheme="/tags/data-visualisation/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>QCon 2017 - Development Practices</title>
+    <link href="/2017/10/30/qcon-2017-dev-practices/"/>
+    <id>/2017/10/30/qcon-2017-dev-practices/</id>
+    <published>2017-10-30T13:00:00.000Z</published>
+    <updated>2021-01-19T02:00:34.777Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+      <category term="software development" scheme="/tags/software-development/"/>
+    
+      <category term="qcon" scheme="/tags/qcon/"/>
+    
+      <category term="autonomy" scheme="/tags/autonomy/"/>
+    
+      <category term="mastery" scheme="/tags/mastery/"/>
+    
+      <category term="purpose" scheme="/tags/purpose/"/>
+    
+      <category term="verification in production" scheme="/tags/verification-in-production/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>NPM Task Running Techniques</title>
+    <link href="/2017/10/03/npm-task-running-techniques/"/>
+    <id>/2017/10/03/npm-task-running-techniques/</id>
+    <published>2017-10-03T13:00:00.000Z</published>
+    <updated>2021-01-19T02:00:34.777Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+      <category term="npm" scheme="/tags/npm/"/>
+    
+      <category term="software development" scheme="/tags/software-development/"/>
+    
+      <category term="Node" scheme="/tags/Node/"/>
+    
+      <category term="task runner" scheme="/tags/task-runner/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Optimising the Performance of an Ionic Application — Part 2</title>
+    <link href="/2017/08/21/optimising-techradar-part-2/"/>
+    <id>/2017/08/21/optimising-techradar-part-2/</id>
+    <published>2017-08-21T14:00:00.000Z</published>
+    <updated>2021-01-19T02:00:34.777Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+      <category term="software development" scheme="/tags/software-development/"/>
+    
+      <category term="performance" scheme="/tags/performance/"/>
+    
+      <category term="Odecee" scheme="/tags/Odecee/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Optimising the Performance of an Ionic Application — Part 1</title>
+    <link href="/2017/08/09/optimising-techradar-part-1/"/>
+    <id>/2017/08/09/optimising-techradar-part-1/</id>
+    <published>2017-08-09T14:00:00.000Z</published>
+    <updated>2021-01-19T02:00:34.777Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+      <category term="software development" scheme="/tags/software-development/"/>
+    
+      <category term="performance" scheme="/tags/performance/"/>
+    
+      <category term="Odecee" scheme="/tags/Odecee/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>QCon New York 2017 — Expert Teams</title>
+    <link href="/2017/07/13/QCon-NY-2017-Expert-Teams-at-Google/"/>
+    <id>/2017/07/13/QCon-NY-2017-Expert-Teams-at-Google/</id>
+    <published>2017-07-13T14:00:00.000Z</published>
+    <updated>2021-01-19T02:00:34.777Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+      <category term="QCon" scheme="/tags/QCon/"/>
+    
+      <category term="software development" scheme="/tags/software-development/"/>
+    
+      <category term="Google" scheme="/tags/Google/"/>
+    
+      <category term="teams" scheme="/tags/teams/"/>
+    
+      <category term="life" scheme="/tags/life/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>QCon New York 2017 — A journey of discovery</title>
+    <link href="/2017/07/10/QCon-NY-2017-journey-discovery/"/>
+    <id>/2017/07/10/QCon-NY-2017-journey-discovery/</id>
+    <published>2017-07-10T14:00:00.000Z</published>
+    <updated>2021-01-19T02:00:34.777Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+      <category term="QCon" scheme="/tags/QCon/"/>
+    
+      <category term="event sourcing" scheme="/tags/event-sourcing/"/>
+    
+      <category term="testing in production" scheme="/tags/testing-in-production/"/>
+    
+      <category term="machine learning" scheme="/tags/machine-learning/"/>
+    
+      <category term="software development" scheme="/tags/software-development/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo - a better blog generation tool</title>
+    <link href="/2017/06/30/hexo-blog/"/>
+    <id>/2017/06/30/hexo-blog/</id>
+    <published>2017-06-30T05:49:36.000Z</published>
+    <updated>2021-01-19T02:00:34.773Z</updated>
+    
+    <content type="html"><![CDATA[<p>It’s been a while since I updated my blog site. In that time, my old MacBook Pro was replaced with a new one. So when it came time to consider how to integrate Medium onto my blog, I didn’t want to have to download new versions of a toolchain - Ruby - that I never use.</p><a id="more"></a><p>Enter <a href="https://hexo.io/docs" target="_blank" rel="noopener">Hexo</a> - a NodeJS-based static site generator. It is similar to Jekyll but is designed to be extensible and customizable. So far I’m loving it. It supports posts, pages and links-to-other-pages. This allows me to write on my favourite blogging platform - <a href="https://medium.com" target="_blank" rel="noopener">medium</a> - while making it easy to keep this site in-sync.</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;It’s been a while since I updated my blog site. In that time, my old MacBook Pro was replaced with a new one. So when it came time to consider how to integrate Medium onto my blog, I didn’t want to have to download new versions of a toolchain - Ruby - that I never use.&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="hexo" scheme="/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>My first Svelte component on NPM — and why it’s a big deal</title>
+    <link href="/2017/04/23/My-first-Svelte-component/"/>
+    <id>/2017/04/23/My-first-Svelte-component/</id>
+    <published>2017-04-23T14:00:00.000Z</published>
+    <updated>2021-01-19T02:00:34.773Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+      <category term="components" scheme="/tags/components/"/>
+    
+      <category term="svelte" scheme="/tags/svelte/"/>
+    
+      <category term="web components" scheme="/tags/web-components/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Semantic versioning for end-user components</title>
+    <link href="/2017/02/16/Semantic-versioning-for-end-user-components/"/>
+    <id>/2017/02/16/Semantic-versioning-for-end-user-components/</id>
+    <published>2017-02-16T13:00:00.000Z</published>
+    <updated>2021-01-19T02:00:34.773Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+      <category term="components" scheme="/tags/components/"/>
+    
+      <category term="semver" scheme="/tags/semver/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Don’t write ES6 Angular 1.x unit tests this way!</title>
+    <link href="/2017/01/12/Dont-write-es6-angular-1-x-unit-tests-this-way/"/>
+    <id>/2017/01/12/Dont-write-es6-angular-1-x-unit-tests-this-way/</id>
+    <published>2017-01-12T13:00:00.000Z</published>
+    <updated>2021-01-19T02:00:34.773Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+      <category term="AngularJS" scheme="/tags/AngularJS/"/>
+    
+      <category term="ES6" scheme="/tags/ES6/"/>
+    
+      <category term="dependency injection" scheme="/tags/dependency-injection/"/>
+    
+      <category term="test" scheme="/tags/test/"/>
+    
+      <category term="unit test" scheme="/tags/unit-test/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Devlog 1.2</title>
+    <link href="/2017/01/05/Devlog-1.2/"/>
+    <id>/2017/01/05/Devlog-1.2/</id>
+    <published>2017-01-05T13:00:00.000Z</published>
+    <updated>2021-01-19T02:00:34.773Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+      <category term="development" scheme="/tags/development/"/>
+    
+      <category term="log" scheme="/tags/log/"/>
+    
+      <category term="devlog" scheme="/tags/devlog/"/>
+    
+  </entry>
+  
+</feed>

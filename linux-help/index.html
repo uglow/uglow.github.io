@@ -1,0 +1,1374 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Brett Uglow&#39;s Blog">
+    <title>Linux Tips - Brett Ugl&#9728;w's Blog</title>
+    <meta name="author" content="Brett Uglow">
+    
+    
+        <link rel="icon" href="/assets/images/icons/favicon.ico">
+        <link rel="apple-touch-icon" sizes="57x57" href="/assets/images/icons/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/assets/images/icons/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/assets/images/icons/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/assets/images/icons/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/assets/images/icons/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/assets/images/icons/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/assets/images/icons/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/assets/images/icons/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icons/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="/assets/images/icons/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/icons/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/icons/favicon-16x16.png">
+        <link rel="manifest" href="manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="/assets/images/icons/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+    
+
+    
+        <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
+    
+    <meta name="description" content="From [https://techincidents.com/important-penetration-testing-cheat-sheet/] Detection   COMMAND DESCRIPTION     netstat -tulpn Show Linux network ports with process ID’s (PIDs)   watch ss -stplu Watch">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="Linux Tips">
+<meta property="og:url" content="/linux-help/index.html">
+<meta property="og:site_name" content="Brett Uglow&#39;s Blog">
+<meta property="og:description" content="From [https://techincidents.com/important-penetration-testing-cheat-sheet/] Detection   COMMAND DESCRIPTION     netstat -tulpn Show Linux network ports with process ID’s (PIDs)   watch ss -stplu Watch">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2021-01-19T02:00:34.777Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Linux Tips">
+<meta name="twitter:description" content="From [https://techincidents.com/important-penetration-testing-cheat-sheet/] Detection   COMMAND DESCRIPTION     netstat -tulpn Show Linux network ports with process ID’s (PIDs)   watch ss -stplu Watch">
+<meta name="twitter:creator" content="@u_glow">
+    
+    
+        
+    
+    
+        <meta property="og:image" content="https://www.gravatar.com/avatar/d4a1a3ea9427d86abfbfa7a41bd79637?s=640"/>
+    
+    
+    
+    
+    <!--STYLES-->
+    <link rel="stylesheet" href="/assets/css/style-sxklfps8ywgfyyjcowvnb4gxdgt0zjts3hsguljmv9uqanxjbnitrovtbrek.min.css">
+    <!--STYLES END-->
+    
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-53871788-1']);
+        _gaq.push(['_trackPageview']);
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+
+    
+</head>
+
+    <body>
+        <div id="blog">
+            <!-- Define author's picture -->
+
+
+    
+        
+    
+
+<header id="header" data-behavior="2">
+    <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+    <div class="header-title">
+        <a class="header-title-link" href="/ ">Brett Ugl<span class="sun">&#9728;</span>w's Blog</a>
+    </div>
+    
+        
+            <a  class="header-right-picture "
+                href="#about">
+        
+        
+            <img class="header-picture" src="https://www.gravatar.com/avatar/d4a1a3ea9427d86abfbfa7a41bd79637?s=90" alt="Author&#39;s picture"/>
+        
+        </a>
+    
+</header>
+
+            <!-- Define author's picture -->
+
+
+    
+
+<nav id="sidebar" data-behavior="2">
+    <div class="sidebar-container">
+        
+            <div class="sidebar-profile">
+                <a href="/#about">
+                    <img class="sidebar-profile-picture" src="https://www.gravatar.com/avatar/d4a1a3ea9427d86abfbfa7a41bd79637?s=110" alt="Author&#39;s picture"/>
+                </a>
+                <h4 class="sidebar-profile-name">Brett Uglow</h4>
+                
+                    <h5 class="sidebar-profile-bio"><p>I am a software engineer (with a focus on the front-end) with 15+ years in the IT industry, working with large telecommunications and financial companies. I’m passionate about creating great user experiences, writing code that is testable + maintainable + efficient, and seeing peoples’ lives changed-for-the-better.</p>
+<blockquote>
+<p>I am the voice of one crying in the wilderness, “Make straight the way of the Lord!” <code>John 1:23</code></p>
+</blockquote>
+</h5>
+                
+            </div>
+        
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/ "
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+                        <span class="sidebar-button-desc">Home</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/all-tags"
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+                        <span class="sidebar-button-desc">Tags</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/all-archives"
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+                        <span class="sidebar-button-desc">Archives</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link open-algolia-search"
+                             href="#search"
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-search"></i>
+                        <span class="sidebar-button-desc">Search</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/tips-and-tricks"
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-star"></i>
+                        <span class="sidebar-button-desc">Tips &amp; Tricks</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="#about"
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+                        <span class="sidebar-button-desc">About</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="https://github.com/uglow"
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+                        <span class="sidebar-button-desc">GitHub</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="https://medium.com/@u_glow/latest"
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-medium"></i>
+                        <span class="sidebar-button-desc">Medium</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="https://twitter.com/u_glow"
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-twitter"></i>
+                        <span class="sidebar-button-desc">Twitter</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="https://www.linkedin.com/in/BrettUglow"
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-linkedin"></i>
+                        <span class="sidebar-button-desc">LinkedIn</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/atom.xml"
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
+                        <span class="sidebar-button-desc">RSS</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+    </div>
+</nav>
+
+            
+            <div id="main" data-behavior="2"
+                 class="
+                        hasCoverMetaIn
+                        ">
+                
+<article class="post" itemscope itemType="http://schema.org/BlogPosting">
+    
+    
+        <div class="post-header main-content-wrap text-left">
+    
+        <h1 class="post-title" itemprop="headline">
+            Linux Tips
+        </h1>
+    
+    
+        <div class="post-meta">
+    <time itemprop="datePublished" datetime="2018-02-04T22:00:00+00:00">
+	
+		    Feb 04, 2018
+    	
+    </time>
+    
+</div>
+
+    
+</div>
+    
+    <div class="post-content markdown" itemprop="articleBody">
+        <div class="main-content-wrap">
+            <p>From [<a href="https://techincidents.com/important-penetration-testing-cheat-sheet/" target="_blank" rel="noopener">https://techincidents.com/important-penetration-testing-cheat-sheet/</a>]</p>
+<h2 id="Detection"><a href="#Detection" class="headerlink" title="Detection"></a>Detection</h2><table>
+<thead>
+<tr>
+<th style="text-align:left">COMMAND</th>
+<th style="text-align:left">DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>netstat -tulpn</code></td>
+<td style="text-align:left">Show Linux network ports with process ID’s (PIDs)</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>watch ss -stplu</code></td>
+<td style="text-align:left">Watch TCP, UDP open ports in real time with socket summary.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>lsof -i</code></td>
+<td style="text-align:left">Show established connections.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>macchanger -m MACADDR INTR</code></td>
+<td style="text-align:left">Change MAC address on KALI Linux.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>ifconfig eth0 192.168.2.1/24</code></td>
+<td style="text-align:left">Set IP address in Linux.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>ifconfig eth0:1 192.168.2.3/24</code></td>
+<td style="text-align:left">Add IP address to existing network interface in Linux.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>ifconfig eth0 hw ether MACADDR</code></td>
+<td style="text-align:left">Change MAC address in Linux using ifconfig.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>ifconfig eth0 mtu 1500</code></td>
+<td style="text-align:left">Change MTU size Linux using ifconfig, change 1500 to your desired MTU.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>dig -x 192.168.1.1</code></td>
+<td style="text-align:left">Dig reverse lookup on an IP address.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>host 192.168.1.1</code></td>
+<td style="text-align:left">Reverse lookup on an IP address, in case dig is not installed.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>dig @192.168.2.2 domain.com -t AXFR</code></td>
+<td style="text-align:left">Perform a DNS zone transfer using dig.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>host -l domain.com nameserver</code></td>
+<td style="text-align:left">Perform a DNS zone transfer using host.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>nbtstat -A x.x.x.x</code></td>
+<td style="text-align:left">Get hostname for IP address.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>ip addr add 192.168.2.22/24 dev eth0</code></td>
+<td style="text-align:left">Adds a hidden IP address to Linux, does not show up when performing an ifconfig.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>tcpkill -9 host google.com</code></td>
+<td style="text-align:left">Blocks access to google.com from the host machine.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>echo &quot;1&quot; &gt; /proc/sys/net/ipv4/ip_forward</code></td>
+<td style="text-align:left">Enables IP forwarding, turns Linux box into a router – handy for routing traffic through a box.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>echo &quot;8.8.8.8&quot; &gt; /etc/resolv.conf</code></td>
+<td style="text-align:left">Use Google DNS.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="System-Information-Commands"><a href="#System-Information-Commands" class="headerlink" title="System Information Commands"></a>System Information Commands</h2><p>Useful for local enumeration.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">COMMAND</th>
+<th style="text-align:left">DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>whoami</code></td>
+<td style="text-align:left">Shows currently logged in user on Linux.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>id</code></td>
+<td style="text-align:left">Shows currently logged in user and groups for the user.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>last</code></td>
+<td style="text-align:left">Shows last logged in users.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>mount</code></td>
+<td style="text-align:left">Show mounted drives.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>df -h</code></td>
+<td style="text-align:left">Shows disk usage in human readable output.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>echo “user:passwd” &#124; chpasswd</code></td>
+<td style="text-align:left">Reset password in one line.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>getent passwd</code></td>
+<td style="text-align:left">List users on Linux.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>strings /usr/local/bin/blah</code></td>
+<td style="text-align:left">Shows contents of none text files, e.g. whats in a binary.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>uname -ar</code></td>
+<td style="text-align:left">Shows running kernel version.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>PATH=$PATH:/my/new-path</code></td>
+<td style="text-align:left">Add a new PATH, handy for local FS manipulation.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>history</code></td>
+<td style="text-align:left">Show bash history, commands the user has entered previously.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Redhat-CentOS-RPM-Based-Distros"><a href="#Redhat-CentOS-RPM-Based-Distros" class="headerlink" title="Redhat / CentOS / RPM Based Distros"></a>Redhat / CentOS / RPM Based Distros</h2><table>
+<thead>
+<tr>
+<th style="text-align:left">COMMAND</th>
+<th style="text-align:left">DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>cat /etc/redhat-release</code></td>
+<td style="text-align:left">Shows Redhat / CentOS version number.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>rpm -qa</code></td>
+<td style="text-align:left">List all installed RPM’s on an RPM based Linux distro.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>rpm -q --changelog openvpn</code></td>
+<td style="text-align:left">Check installed RPM is patched against CVE, grep the output for CVE.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="YUM-Commands"><a href="#YUM-Commands" class="headerlink" title="YUM Commands"></a>YUM Commands</h2><p>Package manager used by RPM-based systems, you can pull some useful information about installed packages and or install additional tools.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">COMMAND</th>
+<th style="text-align:left">DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>yum update</code></td>
+<td style="text-align:left">Update all RPM packages with YUM, also shows whats out of date.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>yum update httpd</code></td>
+<td style="text-align:left">Update individual packages, in this example HTTPD (Apache).</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>yum install package</code></td>
+<td style="text-align:left">Install a package using YUM.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>yum --exclude=package kernel* update</code></td>
+<td style="text-align:left">Exclude a package from being updates with YUM.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>yum remove package</code></td>
+<td style="text-align:left">Remove package with YUM.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>yum erase package</code></td>
+<td style="text-align:left">Remove package with YUM.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>yum list package</code></td>
+<td style="text-align:left">Lists info about yum package.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>yum provides httpd</code></td>
+<td style="text-align:left">What a packages does, e.g Apache HTTPD Server.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>yum info httpd</code></td>
+<td style="text-align:left">Shows package info, architecture, version etc.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>yum localinstall blah.rpm</code></td>
+<td style="text-align:left">Use YUM to install local RPM, settles deps from repo.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>yum deplist package</code></td>
+<td style="text-align:left">Shows deps for a package.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>yum list installed &#124; more</code></td>
+<td style="text-align:left">List all installed packages.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>yum grouplist &#124; more</code></td>
+<td style="text-align:left">Show all YUM groups.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>yum groupinstall &#39;Development Tools&#39;</code></td>
+<td style="text-align:left">Install YUM group.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Debian-Ubuntu-deb-Based-Distros"><a href="#Debian-Ubuntu-deb-Based-Distros" class="headerlink" title="Debian / Ubuntu / .deb Based Distros"></a>Debian / Ubuntu / .deb Based Distros</h2><table>
+<thead>
+<tr>
+<th style="text-align:left">COMMAND</th>
+<th style="text-align:left">DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>cat /etc/debian_version</code></td>
+<td style="text-align:left">Shows Debian version number.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>cat /etc/*-release</code></td>
+<td style="text-align:left">Shows Ubuntu version number.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>dpkg -l</code></td>
+<td style="text-align:left">List all installed packages on Debian / .deb based Linux distro.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Linux-User-Management"><a href="#Linux-User-Management" class="headerlink" title="Linux User Management"></a>Linux User Management</h2><table>
+<thead>
+<tr>
+<th style="text-align:left">COMMAND</th>
+<th style="text-align:left">DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>useradd new-user</code></td>
+<td style="text-align:left">Creates a new Linux user.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>passwd username</code></td>
+<td style="text-align:left">Reset Linux user password, enter just passwd if you are root.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>deluser username</code></td>
+<td style="text-align:left">Remove a Linux user.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Linux-Decompression-Commands"><a href="#Linux-Decompression-Commands" class="headerlink" title="Linux Decompression Commands"></a>Linux Decompression Commands</h2><p>How to extract various archives (tar, zip, gzip, bzip2 etc) on Linux and some other tricks for searching inside of archives etc.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">COMMAND</th>
+<th style="text-align:left">DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>unzip archive.zip</code></td>
+<td style="text-align:left">Extracts zip file on Linux.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>zipgrep *.txt archive.zip</code></td>
+<td style="text-align:left">Search inside a .zip archive.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>tar xf archive.tar</code></td>
+<td style="text-align:left">Extract tar file Linux.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>tar xvzf archive.tar.gz</code></td>
+<td style="text-align:left">Extract a tar.gz file Linux.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>tar xjf archive.tar.bz2</code></td>
+<td style="text-align:left">Extract a tar.bz2 file Linux.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>tar ztvf file.tar.gz &#124; grep blah</code></td>
+<td style="text-align:left">Search inside a tar.gz file.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>gzip -d archive.gz</code></td>
+<td style="text-align:left">Extract a gzip file Linux.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>zcat archive.gz</code></td>
+<td style="text-align:left">Read a gz file Linux without decompressing.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>zless archive.gz</code></td>
+<td style="text-align:left">Same function as the less command for .gz archives.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>zgrep &#39;blah&#39; /var/log/maillog*.gz</code></td>
+<td style="text-align:left">Search inside .gz archives on Linux, search inside of compressed log files.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>vim file.txt.gz</code></td>
+<td style="text-align:left">Use vim to read .txt.gz files (my personal favorite).</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>upx -9 -o output.exe input.exe</code></td>
+<td style="text-align:left">UPX compress .exe file Linux.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Linux-Compression-Commands"><a href="#Linux-Compression-Commands" class="headerlink" title="Linux Compression Commands"></a>Linux Compression Commands</h2><table>
+<thead>
+<tr>
+<th style="text-align:left">COMMAND</th>
+<th style="text-align:left">DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>zip -r file.zip /dir/*</code></td>
+<td style="text-align:left">Creates a .zip file on Linux.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>tar cf archive.tar files</code></td>
+<td style="text-align:left">Creates a tar file on Linux.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>tar czf archive.tar.gz files</code></td>
+<td style="text-align:left">Creates a tar.gz file on Linux.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>tar cjf archive.tar.bz2 files</code></td>
+<td style="text-align:left">Creates a tar.bz2 file on Linux.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>gzip file</code></td>
+<td style="text-align:left">Creates a file.gz file on Linux.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Linux-File-Commands"><a href="#Linux-File-Commands" class="headerlink" title="Linux File Commands"></a>Linux File Commands</h2><table>
+<thead>
+<tr>
+<th style="text-align:left">COMMAND</th>
+<th style="text-align:left">DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>df -h blah</code></td>
+<td style="text-align:left">Display size of file / dir Linux.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>diff file1 file2</code></td>
+<td style="text-align:left">Compare / Show differences between two files on Linux.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>md5sum file</code></td>
+<td style="text-align:left">Generate MD5SUM Linux.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>md5sum -c blah.iso.md5</code></td>
+<td style="text-align:left">Check file against MD5SUM on Linux, assuming both file and .md5 are in the same dir.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>file blah</code></td>
+<td style="text-align:left">Find out the type of file on Linux, also displays if file is 32 or 64 bit.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>dos2unix</code></td>
+<td style="text-align:left">Convert Windows line endings to Unix / Linux.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>base64 &lt; input-file &gt; output-file</code></td>
+<td style="text-align:left">Base64 encodes input file and outputs a Base64 encoded file called output-file.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>base64 -d &lt; input-file &gt; output-file</code></td>
+<td style="text-align:left">Base64 decodes input file and outputs a Base64 decoded file called output-file.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>touch -r ref-file new-file</code></td>
+<td style="text-align:left">Creates a new file using the timestamp data from the reference file, drop the -r to simply create a file.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>rm -rf</code></td>
+<td style="text-align:left">Remove files and directories without prompting for confirmation.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Samba-Commands"><a href="#Samba-Commands" class="headerlink" title="Samba Commands"></a>Samba Commands</h2><p>Connect to a Samba share from Linux.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ smbmount //server/share /mnt/win -o user=username,password=password1</span><br><span class="line">$ smbclient -U user \\\\server\\share</span><br><span class="line">$ mount -t cifs -o username=user,password=password //x.x.x.x/share /mnt/share</span><br></pre></td></tr></table></figure>
+<h2 id="Breaking-Out-of-Limited-Shells"><a href="#Breaking-Out-of-Limited-Shells" class="headerlink" title="Breaking Out of Limited Shells"></a>Breaking Out of Limited Shells</h2><p>The Python trick:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">python -c &apos;import pty;pty.spawn(&quot;/bin/bash&quot;)&apos;</span><br><span class="line">echo os.system(&apos;/bin/bash&apos;)</span><br><span class="line">/bin/sh -i</span><br></pre></td></tr></table></figure>
+<h2 id="Misc-Commands"><a href="#Misc-Commands" class="headerlink" title="Misc Commands"></a>Misc Commands</h2><table>
+<thead>
+<tr>
+<th style="text-align:left">COMMAND</th>
+<th style="text-align:left">DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>init 6</code></td>
+<td style="text-align:left">Reboot Linux from the command line.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>gcc -o output.c input.c</code></td>
+<td style="text-align:left">Compile C code.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>gcc -m32 -o output.c input.c</code></td>
+<td style="text-align:left">Cross compile C code, compile 32 bit binary on 64 bit Linux.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>unset HISTORYFILE</code></td>
+<td style="text-align:left">Disable bash history logging.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>rdesktop X.X.X.X</code></td>
+<td style="text-align:left">Connect to RDP server from Linux.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>kill -9 $$</code></td>
+<td style="text-align:left">Kill current session.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>chown user:group blah</code></td>
+<td style="text-align:left">Change owner of file or dir.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>chown -R user:group blah</code></td>
+<td style="text-align:left">Change owner of file or dir and all underlying files / dirs – recersive chown.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>chmod 600 file</code></td>
+<td style="text-align:left">Change file / dir permissions, see <a href="#linux-file-system-permissions">Linux File System Permissons</a> for details.</td>
+</tr>
+</tbody>
+</table>
+<p>Clear bash history:</p>
+<pre><code>$ ssh user@X.X.X.X | cat /dev/null &gt; ~/.bash_history
+</code></pre><h2 id="Linux-File-System-Permissions"><a href="#Linux-File-System-Permissions" class="headerlink" title="Linux File System Permissions"></a>Linux File System Permissions</h2><table>
+<thead>
+<tr>
+<th style="text-align:left">VALUE</th>
+<th style="text-align:left">MEANING</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>777</code></td>
+<td style="text-align:left">rwxrwxrwx No restriction, global WRX any user can do anything.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>755</code></td>
+<td style="text-align:left">rwxr-xr-x Owner has full access, others can read and execute the file.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>700</code></td>
+<td style="text-align:left">rwx—— Owner has full access, no one else has access.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>666</code></td>
+<td style="text-align:left">rw-rw-rw- All users can read and write but not execute.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>644</code></td>
+<td style="text-align:left">rw-r–r– Owner can read and write, everyone else can read.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>600</code></td>
+<td style="text-align:left">rw——- Owner can read and write, everyone else has no access.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">DIRECTORY</th>
+<th style="text-align:left">DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>/</code></td>
+<td style="text-align:left">/ also know as “slash” or the root.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>/bin</code></td>
+<td style="text-align:left">Common programs, shared by the system, the system administrator and the users.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>/boot</code></td>
+<td style="text-align:left">Boot files, boot loader (grub), kernels, vmlinuz</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>/dev</code></td>
+<td style="text-align:left">Contains references to system devices, files with special properties.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>/etc</code></td>
+<td style="text-align:left">Important system config files.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>/home</code></td>
+<td style="text-align:left">Home directories for system users.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>/lib</code></td>
+<td style="text-align:left">Library files, includes files for all kinds of programs needed by the system and the users.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>/lost+found</code></td>
+<td style="text-align:left">Files that were saved during failures are here.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>/mnt</code></td>
+<td style="text-align:left">Standard mount point for external file systems.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>/media</code></td>
+<td style="text-align:left">Mount point for external file systems (on some distros).</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>/net</code></td>
+<td style="text-align:left">Standard mount point for entire remote file systems – nfs.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>/opt</code></td>
+<td style="text-align:left">Typically contains extra and third party software.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>/proc</code></td>
+<td style="text-align:left">A virtual file system containing information about system resources.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>/root</code></td>
+<td style="text-align:left">root users home dir.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>/sbin</code></td>
+<td style="text-align:left">Programs for use by the system and the system administrator.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>/tmp</code></td>
+<td style="text-align:left">Temporary space for use by the system, cleaned upon reboot.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>/usr</code></td>
+<td style="text-align:left">Programs, libraries, documentation etc. for all user-related programs.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>/var</code></td>
+<td style="text-align:left">Storage for all variable files and temporary files created by users, such as log files, mail queue, print spooler. Web servers, Databases etc.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Linux-Interesting-Files-Dir’s"><a href="#Linux-Interesting-Files-Dir’s" class="headerlink" title="Linux Interesting Files / Dir’s"></a>Linux Interesting Files / Dir’s</h3><p>Places that are worth a look if you are attempting to privilege escalate / perform post exploitation.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">DIRECTORY</th>
+<th style="text-align:left">DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>/etc/passwd</code></td>
+<td style="text-align:left">Contains local Linux users.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>/etc/shadow</code></td>
+<td style="text-align:left">Contains local account password hashes.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>/etc/group</code></td>
+<td style="text-align:left">Contains local account groups.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>/etc/init.d/</code></td>
+<td style="text-align:left">Contains service init script – worth a look to see whats installed.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>/etc/hostname</code></td>
+<td style="text-align:left">System hostname.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>/etc/network/interfaces</code></td>
+<td style="text-align:left">Network interfaces.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>/etc/resolv.conf</code></td>
+<td style="text-align:left">System DNS servers.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>/etc/profile</code></td>
+<td style="text-align:left">System environment variables.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>~/.ssh/</code></td>
+<td style="text-align:left">SSH keys.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>~/.bash_history</code></td>
+<td style="text-align:left">Users bash history log.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>/var/log/</code></td>
+<td style="text-align:left">Linux system log files are typically stored here.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>/var/adm/</code></td>
+<td style="text-align:left">UNIX system log files are typically stored here.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>/var/log/apache2/access.log</code></td>
+<td style="text-align:left">Apache access log file typical path.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>/var/log/httpd/access.log</code></td>
+<td style="text-align:left">Apache access log file typical path.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>/etc/fstab</code></td>
+<td style="text-align:left">File system mounts.</td>
+</tr>
+</tbody>
+</table>
+
+            
+        </div>
+    </div>
+    <div id="post-footer" class="post-footer main-content-wrap">
+        
+        
+            <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--disabled">
+                
+                    <i class="fa fa-angle-left"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
+                </a>
+            </li>
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--disabled">
+                
+                    <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
+                <i class="fa fa-share-alt"></i>
+            </a>
+        </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=/linux-help/index.html">
+                    <i class="fa fa-facebook-official"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=/linux-help/index.html">
+                    <i class="fa fa-twitter"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=/linux-help/index.html">
+                    <i class="fa fa-google-plus"></i>
+                </a>
+            </li>
+        
+        
+            <li class="post-action">
+                <a class="post-action-btn btn btn--default" href="#disqus_thread">
+                    <i class="fa fa-comment-o"></i>
+                </a>
+            </li>
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#">
+            
+                <i class="fa fa-list"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+        
+        
+            
+                <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+            
+        
+    </div>
+</article>
+
+
+
+                <footer id="footer" class="main-content-wrap">
+    <span class="copyrights">
+        Copyrights &copy; 2021 Brett Uglow. All Rights Reserved.
+    </span>
+</footer>
+
+            </div>
+            
+        </div>
+        
+
+
+    
+
+<div id="about">
+    <div id="about-card">
+        <div id="about-btn-close">
+            <i class="fa fa-remove"></i>
+        </div>
+        
+            <img id="about-card-picture" src="https://www.gravatar.com/avatar/d4a1a3ea9427d86abfbfa7a41bd79637?s=110" alt="Author&#39;s picture"/>
+        
+            <h4 id="about-card-name">Brett Uglow</h4>
+        
+            <div id="about-card-bio"><p>I am a software engineer (with a focus on the front-end) with 15+ years in the IT industry, working with large telecommunications and financial companies. I’m passionate about creating great user experiences, writing code that is testable + maintainable + efficient, and seeing peoples’ lives changed-for-the-better.</p>
+<blockquote>
+<p>I am the voice of one crying in the wilderness, “Make straight the way of the Lord!” <code>John 1:23</code></p>
+</blockquote>
+</div>
+        
+        
+            <div id="about-card-job">
+                <i class="fa fa-briefcase"></i>
+                <br/>
+                <p>Principal Engineer @ <a href="https://www.digio.com.au">DigIO</a></p>
+
+            </div>
+        
+        
+            <div id="about-card-location">
+                <i class="fa fa-map-marker"></i>
+                <br/>
+                Melbourne, Australia
+            </div>
+        
+    </div>
+</div>
+
+        <div id="algolia-search-modal" class="modal-container">
+    <div class="modal">
+        <div class="modal-header">
+            <span class="close-button"><i class="fa fa-close"></i></span>
+            <a href="https://algolia.com" target="_blank" rel="noopener" class="searchby-algolia text-color-light link-unstyled">
+                <span class="searchby-algolia-text text-color-light text-small">by</span>
+                <img class="searchby-algolia-logo" src="https://www.algolia.com/static_assets/images/press/downloads/algolia-light.svg">
+            </a>
+            <i class="search-icon fa fa-search"></i>
+            <form id="algolia-search-form">
+                <input type="text" id="algolia-search-input" name="search"
+                    class="form-control input--large search-input" placeholder="Search "
+                    />
+            </form>
+        </div>
+        <div class="modal-body">
+            <div class="no-result text-color-light text-center">no post found</div>
+            <div class="results">
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="/2013/10/01/first-post/">
+                            <img class="media-image" src="/2013/10/01/first-post/abstract-3.jpg" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="/2013/10/01/first-post/">
+                            <h3 class="media-heading">Ugl<span class='sun'>&#9728;</span>w on GitHub</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    Oct 1, 2013
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>A blog site that’s not a pain-in-the-bottom to setup and configure!</p></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="/2013/10/23/Australia-Post-mobile-website-is-live/">
+                            <img class="media-image" src="/2013/10/23/Australia-Post-mobile-website-is-live/header.jpg" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="/2013/10/23/Australia-Post-mobile-website-is-live/">
+                            <h3 class="media-heading">Australia Post's new mobile website is live!</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    Oct 23, 2013
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>Congratulations to Australia Post on their <a href="https://m.auspost.com.au" target="_blank">new mobile website</a>!</p></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="/2013/10/29/Front-End-Automation-Presentation-Greatness/">
+                            <h3 class="media-heading">Front-end Automation presentation greatness</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    Oct 29, 2013
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="/2013/10/30/Grunt-Server/">
+                            <h3 class="media-heading">Grunt live-reloading</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    Oct 30, 2013
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>This post explains how I got live-reloading to work with Grunt.</p></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="/2013/10/31/Lessons-from-client-website-engagement/">
+                            <img class="media-image" src="/2013/10/31/Lessons-from-client-website-engagement/abstract-2.jpg" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="/2013/10/31/Lessons-from-client-website-engagement/">
+                            <h3 class="media-heading">Notes from a recent mobile project</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    Oct 31, 2013
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>I have been developing a website for a top-tier client in Melbourne. The site is built using AngularJS (v1.1.5 as of time of writing), SASS, Compass and GruntJs to pull it all together. The development team consisted of myself as lead dev, Mario Skouros, Peter Mescalchin and Steven Yip, with assistance from Michael Black and Vlado Grancaric. Well done guys!</p></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="/2014/02/02/Setup-Jekyll-For-GitHub/">
+                            <h3 class="media-heading">Setup Jekyll for Github Pages</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    Feb 2, 2014
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>One of the great features of GitHub is that it allows you to host static content. This post looks at how this blog is published to GitHub.</p></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="/2014/02/12/Grunt-File-Include-Plugins/">
+                            <img class="media-image" src="/2014/02/12/Grunt-File-Include-Plugins/abstract-10.jpg" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="/2014/02/12/Grunt-File-Include-Plugins/">
+                            <h3 class="media-heading">File-include plugins for GruntJS</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    Feb 12, 2014
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><h2 id="The-Problem"><a href="#The-Problem" class="headerlink" title="The Problem"></a>The Problem</h2><p>You want to keep your code <abbr title="Don't repeat yourself">DRY</abbr> and/or you want to keep data separate form your code.</p></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="/2014/06/25/AngularJS-Melbourne-Talk/">
+                            <img class="media-image" src="/2014/06/25/AngularJS-Melbourne-Talk/abstract-10.jpg" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="/2014/06/25/AngularJS-Melbourne-Talk/">
+                            <h3 class="media-heading">AngularJS Melbourne talk</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    Jun 25, 2014
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>On Monday 23rd June, I was privileged to attend the first <a href="http://www.meetup.com/AngularJS-Melbourne/events/180144952/" target="_blank" rel="noopener">AngularJS Melbourne Meetup</a><br>as a guest speaker. Thanks to <a href="http://www.meetup.com/AngularJS-Melbourne/members/46442222/" target="_blank" rel="noopener">Alex</a> for organising the event. It was a great night!</p></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="/2014/06/30/Install-Node-OSX-No-Sudo/">
+                            <img class="media-image" src="/2014/06/30/Install-Node-OSX-No-Sudo/abstract-2.jpg" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="/2014/06/30/Install-Node-OSX-No-Sudo/">
+                            <h3 class="media-heading">Simple sudo-less NPM installs on OSX</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    Jun 30, 2014
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>OK, so I finally understand <a href="http://blog.hood.ie/2014/02/why-you-shouldnt-use-sudo-with-npm/" target="_blank" rel="noopener">why it’s bad</a> to use <code>sudo npm install</code>.</p></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="/2014/07/31/Accessibility-on-iOS7/">
+                            <img class="media-image" src="/2014/07/31/Accessibility-on-iOS7/abstract-7.jpg" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="/2014/07/31/Accessibility-on-iOS7/">
+                            <h3 class="media-heading">Web Accessibility on iOS7 devices</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    Jul 31, 2014
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p><strong>UPDATE August 2nd 2014: The <a href="http://m.auspost.com.au/" target="_blank" rel="noopener">Australia Post mobile site</a> has been deemed AA compliant with respect to the WCAG accessibility guidelines!</strong></p>
+<p>This page is dedicated to documenting some of the lessons learnt while implementing accessibility on iOS devices for the <a href="http://m.auspost.com.au/" target="_blank" rel="noopener">Australia Post mobile site</a>.</p></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+            </div>
+        </div>
+        <div class="modal-footer">
+            <p class="results-count text-medium"
+                data-message-zero="no post found"
+                data-message-one="1 post found"
+                data-message-other="{n} posts found">
+                43 posts found
+            </p>
+        </div>
+    </div>
+</div>
+
+        
+<div id="cover" style="background-image:url('/assets/images/cover.jpg');"></div>
+        <!--SCRIPTS-->
+<script src="/assets/js/script-ivwiy10zeb8fifc4swnhkwneuk64y53w2scmdmtp8thi9cqfxh31aowtroaz.min.js"></script>
+<!--SCRIPTS END-->
+
+    
+        <script>
+             var disqus_config = function () {
+                 // page.url needs to be fully qualified
+                 this.page.url = location.protocol + location.host + location.port + '/linux-help/index.html';
+                 
+                    this.page.identifier = 'linux-help/index.html';
+                 
+             };
+            (function() {
+                var d = document, s = d.createElement('script');
+                var disqus_shortname = 'uglowsblog';
+                s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+    
+
+
+    </body>
+</html>
